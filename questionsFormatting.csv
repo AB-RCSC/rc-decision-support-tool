@@ -1,0 +1,65 @@
+question_code,question_text,q_option_code,q_option_label
+user_entry,"Are you looking to design a new remote camera project, or analyze data that was already collected?","study_design, analysis","Design a new remote camera project, Analyze data that was already collected"
+objective,"What's your objective? Select ""Unknown"" if you're not sure.","obj_inventory, obj_divers_rich, obj_occupancy, obj_rel_abund, obj_abundance, obj_pop_size, obj_density, obj_vital_rate, obj_behaviour, obj_unknown","Species inventory, Species diversity & richness, Occupancy, Relative abundance, Absolute abundance, Population size, Density, Vital rates, Behaviour, Unknown"
+num_cams_limited,Do you have a limited number of cameras?,"TRUE, FALSE","YES, NO"
+num_cams_avail,"If so, how many?",NA,NA
+study_area_mult,Do you plan to use data from multiple study areas?,"TRUE, FALSE","YES, NO"
+cam_dens_gradient,Will you place Camera Locations across a known density gradient?,"TRUE, FALSE","YES, NO"
+cam_strat_covar,"Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance)","TRUE, FALSE","YES, NO"
+cam_strat_covar_num,"If so, how many covariates?",NA,NA
+,"(e.g., 5 different habitat types would be 5 covariates)",,
+cam_high_dens,"Can cameras be deployed close together (i.e., high camera density)?","TRUE, FALSE","YES, NO"
+surv_dur_min_known,Is there a minimum number of months you can sample in total?,"TRUE, FALSE","YES, NO"
+surv_dur_mth_min,"If so, how many?",NA,NA
+surv_dur_min_known,Is there a maximum number of months you can sample?,"TRUE, FALSE","YES, NO"
+surv_dur_mth_max,"If so, how many?",NA,NA
+,,,
+survey_dur_mth,How many months did you sample in total?,NA,NA
+sp_asymptote,Do you wish to sample long enough to reach the species-accumulation asymptote?,"yes, no, unkn","YES, NO, I'm not sure"
+study_season_num,How many seasons will the study contain?,NA,NA
+obj_targ_sp,Are you sampling for a single species or multiple?,"single, multiple","Single, Multiple"
+sp_info,How well is the biology about of the Target Species known?,"poor, well, unkn","Poorly known, Well known, I'm not sure"
+sp_type,Is the Target Species a carnivore or ungulate?,"carnivore, ungulate, other","Carnivore, Ungulate, Other"
+sp_dens_low,Does the Target Species occur in low density?,"yes, no, unkn","YES, NO, I'm not sure"
+sp_occ_restr,Is the distribution of the Target Species highly restricted?,"yes, no, unkn","YES, NO, I'm not sure"
+data_hr,Is home range size information available for your Target Species (can be taken from the literature)?,"integer, NA","YES, NO"
+,"If so, enter the home range diameter (in metres)",,
+hr_size,"If so, enter the home range diameter (in metres)",,
+sp_size,What is the approximate size of the Target Species?,"sm, med, lg, multiple","Small, Medium, Large, Multiple"
+sp_rarity,How rare or common is the Target Species?,"common, less common, rare, very-rare, unkn, multiple","Common, Less common, Rare, Very rare, Unknown, Multiple"
+sp_detprob_cat,How detectable is the Target Species?,"low, med, high, unkn, multiple","Low, Medium, High, Unknown, Multiple"
+sp_behav,"Is the Target Species known or likely to investigate the camera (e.g., moose, coyote) or be camera shy (e.g., lynx)?","exploratory, neutral, avoidant, unkn, variable","Exploratory, Neutral, Avoidant, I'm not sure, Variable"
+sp_behav_season,"Does the [or one of the, if multiple] Target Species' behaviour vary by season?","yes, no, unkn","YES, NO, I'm not sure"
+marking_code,Do individuals have natural or artificial marks such that they can be uniquely identified?,"Marked, Partially marked, Unmarked","Marked, Partially marked, Unmarked"
+,"(i.e. are the individuals, population, or species ""marked,"" ""unmarked,"" or ""partially marked"")",,
+marking_allsub,Are ALL or a SUBET individuals naturally/artifically marked?,"All, Subset","All, Subset"
+3ormore_cat_ids,"Are there 3+ categories of traits that can be be used to identify individuals? (i.e., information used to identify individuals that can be divided into distinct groups, e.g, sex class, age class, coat colour, markings and antler point count; Clarke et al., 2023)","TRUE, FALSE","YES, NO"
+auxillary_info,"Can additional information be collected/accessed? If so, what type?","cannot_collect, dist_to_cam, mvmt_speed, timelapse, timeinfront, none","Cannot be collected, Distance from animals to the camera, Animal movement speed, Collecting time-lapse images, Measuring time individuals spend in front of the camera, None of these options"
+aux_count_possible,Can counts of individuals be determined?,"TRUE, FALSE","YES, NO"
+focalarea_calc,Focal area measured or detections binned by distance?,"Measured, Binned","Measured, Binned"
+cam_high_dens,repeat,"TRUE, FALSE","YES, NO"
+sp_common_pop_lg,Is the study population large?,"TRUE, FALSE","YES, NO"
+sp_size,"Are all of the Target Species within a same body size category? If so, which category?","sm, med, lg, multiple","Small, Medium, Large, Multiple"
+sp_behav,"Are all of the ""target species"" similarly likely to investigate the camera or stake?","exploratory, neutral, avoidant, unkn, variable","Same behaviour - Exploratory, Same behaviour - Neutral, Same behaviour - Avoidant, I'm not sure, Variable"
+,"(e.g., moose, coyote) or be camera shy (e.g., ....)",,
+,"If all are similar, which best describes the likliehood to investigate the camera?",,
+sp_rarity,Are all of the Target Species similarly rare or common?,"common, less common, rare, very-rare, unkn, multiple","Common, Less common, Rare, Very rare, Unknown, Multiple"
+,"(e.g., )",,
+,"If all are similar, which best describes the Target Species rarity?",,
+sp_rarity_rarest,How common is the rarest Target Species?,"common, less common, rare, very-rare, unkn, multiple","Common, Less common, Rare, Very rare, Unknown, Multiple"
+sp_rarity_leastrare,How common is the most common Target Species?,"common, less common, rare, very-rare, unkn, multiple","Common, Less common, Rare, Very rare, Unknown, Multiple"
+sp_detprob_cat,Are all of the Target Species similarly detectable?,"low, med, high, unkn, multiple","Low, Medium, High, Unknown, Multiple"
+,"(e.g., )",,
+,"If all are similar, which best describes the Target Species detectability?",,
+sp_detprob_cat_most,How detectable is the most detectable Target Species?,"low, med, high, unkn, multiple","Low, Medium, High, Unknown, Multiple"
+sp_detprob_cat_least,How detectable is the least detectable Target Species?,"low, med, high, unkn, multiple","Low, Medium, High, Unknown, Multiple"
+cam_makemod_same,Do you plan to use cameras of the same make and model?,"TRUE, FALSE","YES, NO"
+cam_settings_mult,Do you plan to use data from cameras with different settings?,"TRUE, FALSE","YES, NO"
+,"(e.g., if pooling data from multiple studies, protocols for camera settings may differ)",,
+cam_protocol_ht_angle,Was the placement Camera Height and Camera Angle consistent or variable across Camera Locations?,"Consistent, Variable","Consistent, Variable"
+cam_direction_ds,Was the Camera Direction either random or consistent?,"TRUE, FALSE","YES, NO"
+bait_lure,"Do you plan to use bait or lure? If so, will you use the same type of bait or lure, or multiple types?","none, baitlure_single, baitlure_multi","No bait/lure, YES - single type of bait/lure, YES - Multiple types of bait/lure"
+bait_lure_cams,Will bait/lure be placed at all or a subset of Camera Locations?,"baitlure_allcams,baitlure_subsetcams","All Camera Locations, A subset of Camera Locations"
+targ_feature,Do you plan to target specific feature(s)?,"TRUE, FALSE","YES, NO"
+,"(e.g., facing the camera towards a game trail or mineral lick)",,
+targ_feature_same,Will all cameras target the same feature?,"TRUE, FALSE","YES, NO"
