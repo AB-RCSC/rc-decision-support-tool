@@ -1,5 +1,5 @@
 question_code,question_text,q_option_code,q_option_label,combined_code,next_question
-user_entry,"Are you looking to design a new remote camera project, or analyze data that was already collected?","study_design, analysis","Design a new remote camera project, Analyze data that was already collected","{
+objective,"What's your objective? Select ""Unknown"" if you're not sure.","obj_inventory, obj_divers_rich, obj_occupancy, obj_rel_abund, obj_abundance, obj_pop_size, obj_density, obj_vital_rate, obj_behaviour, obj_unknown","Species inventory, Species diversity & richness, Occupancy, Relative abundance, Absolute abundance, Population size, Density, Vital rates, Behaviour, Unknown","{
     ""OR"": {
         ""objective"": [
             ""obj_divers_rich"",
@@ -8,12 +8,24 @@ user_entry,"Are you looking to design a new remote camera project, or analyze da
         ]
     }
 }",notebook2
-objective,"What's your objective? Select ""Unknown"" if you're not sure.","obj_inventory, obj_divers_rich, obj_occupancy, obj_rel_abund, obj_abundance, obj_pop_size, obj_density, obj_vital_rate, obj_behaviour, obj_unknown","Species inventory, Species diversity & richness, Occupancy, Relative abundance, Absolute abundance, Population size, Density, Vital rates, Behaviour, Unknown",user_entry_analysis,notebook3
-num_cams_limited,Do you have a limited number of cameras?,"TRUE, FALSE","YES, NO",objective_obj_inventory,
-num_cams_avail,"If so, how many?",,,objective_obj_divers_rich,
-study_area_mult,Do you plan to use data from multiple study areas?,"TRUE, FALSE","YES, NO",objective_obj_occupancy,
-cam_dens_gradient,Will you place Camera Locations across a known density gradient?,"TRUE, FALSE","YES, NO",objective_obj_rel_abund,
-cam_strat_covar,"Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance)","TRUE, FALSE","YES, NO",objective_obj_abundance,
-cam_strat_covar_num,"If so, how many covariates?",,,objective_obj_pop_size,
-,"(e.g., 5 different habitat types would be 5 covariates)",,,objective_obj_density,
-cam_high_dens,"Can cameras be deployed close together (i.e., high camera density)?","TRUE, FALSE","YES, NO",objective_obj_vital_rate,
+num_cams_limited,Do you have a limited number of cameras?,"TRUE, FALSE","YES, NO",user_entry_analysis,notebook3
+num_cams_avail,"If so, how many?",NA,NA,objective_obj_inventory,
+cam_strat_covar,"Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance)","TRUE, FALSE","YES, NO",objective_obj_divers_rich,
+cam_strat_covar_num,"If so, how many covariates?
+(e.g., 5 different habitat types would be 5 covariates)",NA,NA,objective_obj_occupancy,
+"surv_dur_mth_min
+
+","Is there a minimum number of months you can sample in total? If so, how many?","TRUE, FALSE, NA","YES, NO",objective_obj_rel_abund,
+"surv_dur_mth_max
+
+","Is there a maximum number of months you can sample? If so, how many?","TRUE, FALSE, NA","YES, NO",objective_obj_abundance,
+sp_asymptote,Do you wish to sample long enough to reach the species-accumulation asymptote?,"yes, no, unkn","YES, NO, I'm not sure",objective_obj_pop_size,
+obj_targ_sp,Are you sampling for a single species or multiple?,"single, multiple","Single, Multiple",objective_obj_density,
+sp_info,How well is the biology about of the Target Species known?,"poor, well, unkn","Poorly known, Well known, I'm not sure",objective_obj_vital_rate,
+sp_occ_restr,Is the distribution of the Target Species highly restricted?,"yes, no, unkn","YES, NO, I'm not sure",,
+hr_size,"If so, enter the home range diameter (in metres)",,,,
+data_hr,Is home range size information available for your Target Species (can be taken from the literature)?,"integer, NA","YES, NO",,
+sp_size,What is the approximate size of the Target Species?,"sm, med, lg, multiple","Small, Medium, Large, Multiple",,
+sp_rarity,How rare or common is the Target Species?,"common, less common, rare, very-rare, unkn, multiple","Common, Less common, Rare, Very rare, Unknown, Multiple",,
+sp_detprob_cat,How detectable is the Target Species?,"low, med, high, unkn, multiple","Low, Medium, High, Unknown, Multiple",,
+cam_independent,Will each camera location be treated as an independent sample?,"TRUE, FALSE","YES, NO",,
