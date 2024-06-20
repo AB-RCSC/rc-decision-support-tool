@@ -44,7 +44,17 @@ sp_occ_restr,"{
         ""obj_density""
     ]
 }",sp_occ_restr,Is the distribution of the Target Species highly restricted?,"yes, no, unkn","YES, NO, I'm not sure"
-sp_hr_size,,hr_size,"If so, enter the home range diameter (in metres)",,
+sp_hr_size2,"{
+    ""obj_targ_sp"": [
+        ""single""
+    ],
+    ""objective"": [
+        ""obj_occupancy"", 
+        ""obj_rel_abund"", 
+        ""obj_density"", 
+        ""obj_behaviour""
+    ]
+}",hr_size,"If so, enter the home range diameter (in metres)",,
 sp_hr_size,"{
     ""obj_targ_sp"": [
         ""single""
