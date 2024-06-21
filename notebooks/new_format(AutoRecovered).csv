@@ -60,10 +60,10 @@ sp_hr_size,"{
         ""single""
     ],
     ""objective"": [
-        ""obj_occupancy"", 
-        ""obj_rel_abund"", 
-        ""obj_density"", 
-        ""obj_behaviour""
+        ""obj_occupancy"",
+        ""obj_rel_abund"",
+        ""obj_behaviour"",
+        ""obj_density""
     ]
 }",data_hr,Is home range size information available for your Target Species (can be taken from the literature)?,"integer, NA","YES, NO"
 sp_size,"{
