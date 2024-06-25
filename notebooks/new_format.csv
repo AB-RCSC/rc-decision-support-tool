@@ -18,9 +18,7 @@ cam_strat_covar,"{
 }",cam_strat_covar_num,"If so, how many covariates?
 (e.g., 5 different habitat types would be 5 covariates)",NA,NA
 surv_dur_min_max,NULL,surv_dur_mth_min,"Is there a minimum number of months you can sample in total? If so, how many?","TRUE, FALSE, NA","YES, NO"
-surv_dur_min_max,NULL,"surv_dur_mth_max
-
-","Is there a maximum number of months you can sample? If so, how many?","TRUE, FALSE, NA","YES, NO"
+surv_dur_min_max,NULL,surv_dur_mth_max,"Is there a maximum number of months you can sample? If so, how many?","TRUE, FALSE, NA","YES, NO"
 sp_asymptote,"{
     ""objective"": [
         ""obj_divers_rich""
