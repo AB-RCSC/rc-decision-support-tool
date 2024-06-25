@@ -1,1 +1,1 @@
-{"objective": "obj_divers_rich", "next_notebook_index": 5, "num_cams_limited": "TRUE", "num_cams_avail": 8, "cam_strat_covar": "TRUE", "cam_strat_covar_num": 4, "surv_dur_mth_min": 8, "sp_asymptote": "unkn", "obj_targ_sp": "single", "sp_size": "med"}
+{"objective": "obj_divers_rich", "next_notebook_index": 6, "num_cams_limited": "TRUE", "num_cams_avail": 8, "cam_strat_covar": "TRUE", "cam_strat_covar_num": 4, "surv_dur_mth_min": 9, "sp_asymptote": "unkn", "obj_targ_sp": "single", "sp_size": "med"}
