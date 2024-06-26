@@ -42,7 +42,7 @@ sp_occ_restr,"{
         ""obj_density""
     ]
 }",sp_occ_restr,Is the distribution of the Target Species highly restricted?,"yes, no, unkn","YES, NO, I'm not sure"
-sp_hr_size2,"{
+sp_hr_size,"{
     ""obj_targ_sp"": [
         ""single""
     ],
