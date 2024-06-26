@@ -1,1 +1,1 @@
-{"objective": "obj_density", "obj_targ_sp": "single", "num_cams": 2, "cam_strat_covar": 9}
+{"objective": "obj_density", "obj_targ_sp": "single", "num_cams": 2, "cam_strat_covar": 9, "sp_hr_size": 9, "sp_size": "lg", "sp_rarity": "rare", "sp_detprob_cat": "high", "cam_independent": "FALSE"}
