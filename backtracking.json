@@ -1,1 +1,9 @@
-["obj_targ_sp", "obj_targ_sp", "obj_targ_sp", "obj_targ_sp", "obj_targ_sp", "obj_targ_sp", "obj_targ_sp", "num_cams", "num_cams", "num_cams", "num_cams", "cam_strat_covar", "sp_hr_size", "sp_size", "sp_rarity", "sp_detprob_cat", "cam_independent", "objective", "num_cams", "cam_strat_covar", "cam_strat_covar", "sp_asymptote", "obj_targ_sp", "sp_size"]
+[
+  "objective",
+  "num_cams",
+  "cam_strat_covar",
+  "cam_strat_covar",
+  "sp_asymptote",
+  "obj_targ_sp",
+  "sp_size"
+]

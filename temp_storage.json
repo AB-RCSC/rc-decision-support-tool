@@ -1,14 +1,10 @@
 {
   "objective": "obj_divers_rich",
+  "num_cams": 6,
+  "cam_strat_covar": "FALSE",
+  "surv_dur_mth_max": "FALSE",
+  "surv_dur_mth_min": 2,
+  "sp_asymptote": "unkn",
   "obj_targ_sp": "single",
-  "num_cams": 9,
-  "cam_strat_covar": 8,
-  "sp_hr_size": 9,
-  "sp_size": "lg",
-  "sp_rarity": "rare",
-  "sp_detprob_cat": "high",
-  "cam_independent": "FALSE",
-  "surv_dur_mth_min": 4,
-  "surv_dur_mth_max": 7,
-  "sp_asymptote": "no"
+  "sp_size": "multiple"
 }
