@@ -1,0 +1,38 @@
+in_use,obj_sort,objective_fulltext,objective,marking_code,approach,approach_abbrev,approach_fulltext,approach_sub_type,approach_sub_fulltext,approach_ref,zeroinflation,overdispersion
+TRUE,1,Species inventory,obj_inventory,NA,mod_inventory,Inventory,Species inventory,NA,NA,NA,NA,NA
+TRUE,2,Species diversity & richness,obj_divers_rich,NA,mod_divers_rich,Diversity & richness,Species diversity & richness,mod_divers_rich_rich,NA,NA,NA,NA
+FALSE,3,Species diversity & richness,obj_divers_rich,NA,mod_divers_rich,Diversity & richness,Species diversity & richness,mod_divers_rich_rich,Species richness,NA,NA,NA
+FALSE,4,Species diversity & richness,obj_divers_rich,NA,mod_divers_rich,Diversity & richness,Species diversity & richness,mod_divers_rich_rich,Species richness,NA,NA,NA
+FALSE,5,Species diversity & richness,obj_divers_rich,NA,mod_divers_rich,Diversity & richness,Species diversity & richness,mod_divers_rich_divers,Species diversity,NA,NA,NA
+FALSE,6,Species diversity & richness,obj_divers_rich,NA,mod_divers_rich,Diversity & richness,Species diversity & richness,mod_divers_rich_beta,Beta-diversity,NA,NA,NA
+TRUE,7,Occupancy,obj_occupancy,NA,mod_occupancy,Occupancy,Occupancy models,NA,NA,"[MacKenzie et al., 2002]",NA,NA
+TRUE,8,Relative abundance,obj_rel_abund,NA,mod_rai,RAI,Relative abundance indices,mod_rai_poisson,Poisson,NA,FALSE,FALSE
+TRUE,9,Relative abundance,obj_rel_abund,NA,mod_rai,RAI,Relative abundance indices,mod_rai_zip,Zero-inflated poisson (ZIP),[Lambert 1992],TRUE,FALSE
+TRUE,10,Relative abundance,obj_rel_abund,NA,mod_rai,RAI,Relative abundance indices,mod_rai_nb,Negative binomial (NB),"[Mullahy, 1986]",FALSE,TRUE
+TRUE,11,Relative abundance,obj_rel_abund,NA,mod_rai,RAI,Relative abundance indices,mod_rai_zinb,Zero-inflated negative binomial (ZINB),"[McCullagh & Nelder, 1989]",TRUE,TRUE
+TRUE,12,Relative abundance,obj_rel_abund,NA,mod_rai,RAI,Relative abundance indices,mod_rai_hurdle,Hurdle,[Mullahy 1986; Heilbron 1994],TRUE,TRUE
+TRUE,13,Population size,obj_pop_size,Marked,mod_cr_cmr,CR/CMR,Capture-recapture (CR) / Capture-mark-recapture (CMR),NA,NA,"[Karanth, 1995; Karanth & Nichols, 1998]",NA,NA
+TRUE,14,Absolute abundance,obj_abundance,Marked,mod_cr_cmr,CR/CMR,Capture-recapture (CR) / Capture-mark-recapture (CMR),NA,NA,"[Karanth, 1995; Karanth & Nichols, 1998]",NA,NA
+TRUE,15,Vital rates,obj_vital_rate,Marked,mod_cr_cmr,CR/CMR,Capture-recapture (CR) / Capture-mark-recapture (CMR),NA,NA,"[Karanth, 1995; Karanth & Nichols, 1998]",NA,NA
+TRUE,16,Density,obj_density,Marked,mod_cr_cmr,CR/CMR,Capture-recapture (CR) / Capture-mark-recapture (CMR),NA,NA,"[Karanth, 1995; Karanth & Nichols, 1998]",NA,NA
+TRUE,17,Density,obj_density,Marked,mod_scr_secr,SCR/SECR,Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR),NA,NA,"[Borchers & Efford, 2008; Efford, 2004; Royle & Young, 2008; Royle et al., 2009]",NA,NA
+TRUE,18,Population size,obj_pop_size,Marked,mod_scr_secr,SCR/SECR,Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR),NA,NA,"[Borchers & Efford, 2008; Efford, 2004; Royle & Young, 2008; Royle et al., 2009]",NA,NA
+FALSE,19,Density,obj_density,Partially marked,mod_mr,MR,Mark-resight (MR),NA,NA,"[Arnason et al., 1991; McClintock et al., 2009]",NA,NA
+TRUE,20,Density,obj_density,Partially marked,mod_smr,SMR,Spatial mark-resight ,NA,NA,"[Chandler & Royle, 2013; Sollmann et al., 2013a, 2013b]",NA,NA
+TRUE,21,Density,obj_density,Unmarked,mod_sc,SC,Spatial count (SC) model / Unmarked spatial capture-recapture,NA,NA,"[Chandler & Royle, 2013; Royle et al., 2014]",NA,NA
+TRUE,22,Density,obj_density,Partially marked,mod_catspim,catSPIM,Spatial Partial Identity Model (Categorical SPIM; catSPIM),NA,NA,"[Augustine et al., 2019; Sun et al., 2022]",NA,NA
+TRUE,23,Population size,obj_pop_size,Partially marked,mod_catspim,catSPIM,Spatial Partial Identity Model (Categorical SPIM; catSPIM),NA,NA,"[Augustine et al., 2019; Sun et al., 2022]",NA,NA
+TRUE,24,Density,obj_density,Partially marked,mod_2flankspim,2-flank SPIM,Spatial Partial Identity Model (2-flank SPIM),NA,NA,"[Augustine et al., 2018]",NA,NA
+TRUE,25,Population size,obj_pop_size,Partially marked,mod_2flankspim,2-flank SPIM,Spatial Partial Identity Model (2-flank SPIM),NA,NA,"[Augustine et al., 2018]",NA,NA
+FALSE,26,Absolute abundance,obj_abundance,Unmarked,mod_roylenichols,Royle-Nichols,Royle-Nichols,NA,NA,"[Royle & Nichols, 2003; MacKenzie et al., 2006]",NA,NA
+FALSE,27,Density,obj_density,Unmarked,mod_roylenichols,Royle-Nichols,Royle-Nichols,NA,NA,"[Royle & Nichols, 2003; MacKenzie et al., 2006]",NA,NA
+TRUE,28,Density,obj_density,Unmarked,mod_rem,REM,Random encounter model (REM),NA,NA,"[Rowcliffe et al., 2008, 2013]",NA,NA
+TRUE,29,Density,obj_density,Unmarked,mod_rest,REST,Random encounter and staying time (REST),NA,NA,"[Nakashima et al., 2017]",NA,NA
+TRUE,30,Density,obj_density,Unmarked,mod_tifc,TIFC,Time in front of the camera (TIFC),NA,NA,"Huggard, 2018; Warbington & Boyce, 2020; tested in Becker et al., 2022",NA,NA
+TRUE,31,Density,obj_density,Unmarked,mod_ds,DS,Distance sampling (DS),NA,NA,"[Howe et al., 2017]",NA,NA
+TRUE,32,Density,obj_density,Unmarked,mod_tte,TTE,Time-to-event (TTE),NA,NA,"[Moeller et al., 2018]",NA,NA
+TRUE,33,Density,obj_density,Unmarked,mod_ste,STE,Space-to-event (STE),NA,NA,"[Moeller et al., 2018]",NA,NA
+TRUE,34,Density,obj_density,Unmarked,mod_is,IS,Instantaneous sampling (IS),NA,NA,"[Moeller et al., 2018]",NA,NA
+TRUE,35,"Behaviour (Diel activity patterns, mating, boldness, etc.)",obj_behaviour,NA,mod_behaviour,Behaviour,Behaviour,NA,NA,NA,NA,NA
+FALSE,,Density,obj_density,,mod_nmixture,N-mixture,N-mixture,NA,NA,NA,NA,NA
+TRUE,,Population size,obj_abundance,Marked,mod_scr_secr,SCR/SECR,Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR),NA,NA,"[Borchers & Efford, 2008; Efford, 2004; Royle & Young, 2008; Royle et al., 2009]",NA,NA
