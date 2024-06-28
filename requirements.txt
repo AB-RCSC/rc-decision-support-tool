@@ -24,13 +24,11 @@ jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.0
 MarkupSafe==1.1.1
 mistune==0.8.4
-markdown-it-py
 nbclient==0.5.2
 nbconvert==6.0.7
 nbformat==5.1.2
 nest-asyncio==1.5.1
 notebook==6.2.0
-pandas
 packaging==20.9
 pandocfilters==1.4.3
 parso==0.8.1
