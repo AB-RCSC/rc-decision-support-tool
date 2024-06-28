@@ -1,1 +1,1 @@
-{"objective": "obj_pop_size", "num_cams": 6, "cam_strat_covar": "FALSE", "surv_dur_mth_max": 9, "surv_dur_mth_min": 2, "sp_asymptote": "unkn", "obj_targ_sp": "single", "sp_size": "multiple"}
+{"objective": "obj_occupancy", "num_cams": 6, "cam_strat_covar": "FALSE", "surv_dur_mth_max": 9, "surv_dur_mth_min": 2, "sp_asymptote": "unkn", "obj_targ_sp": "single", "sp_size": "multiple"}
