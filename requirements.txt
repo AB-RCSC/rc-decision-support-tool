@@ -90,7 +90,6 @@ PySocks
 python-dateutil
 python-json-logger
 pytz
-pywin32==306
 pywinpty
 PyYAML
 pyzmq
@@ -104,7 +103,6 @@ six
 sniffio
 soupsieve
 stack-data
-terminado
 tinycss2
 tomli
 tornado
