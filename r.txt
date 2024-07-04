@@ -1,3 +1,8 @@
+pywinpty
+
+
+
+
 accessible-pygments==0.0.5
 addict==2.4.0
 aiofiles==23.2.1
