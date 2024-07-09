@@ -12,6 +12,7 @@ Brotli
 cached-property
 certifi
 cffi
+chardet
 charset-normalizer
 colorama
 comm
