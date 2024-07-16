@@ -1,1 +1,1 @@
-{"objective": "obj_density", "cam_strat_covar": 6, "sp_hr_size": "NA", "cam_independent": "FALSE", "num_cams": "FALSE", "obj_targ_sp": "single", "sp_asymptote": "no"}
+{"objective": "obj_density", "cam_strat_covar": 6, "sp_hr_size": "NA", "cam_independent": "FALSE", "num_cams": "FALSE", "obj_targ_sp": "single", "sp_asymptote": "no", "surv_dur_mth_min": "FALSE", "surv_dur_mth_max": "FALSE"}
