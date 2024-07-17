@@ -33,6 +33,15 @@ sp_info,"{
         ""obj_inventory""
     ]
 }",sp_info,How well is the biology about of the Target Species known?,"poor, well, unkn","Poorly known, Well known, I'm not sure"
+sp_type,"{
+    ""obj_targ_sp"": [
+        ""single""
+    ],
+    ""objective"": [
+        ""obj_rel_abund"", 
+        ""obj_density""
+    ]
+}",sp_type,Is the Target Species a carnivore or ungulate?,"carnivore, ungulate, other","Carnivore, Ungulate, Other"
 sp_occ_restr,"{
     ""obj_targ_sp"": [
         ""single""
@@ -100,3 +109,6 @@ cam_independent,"{
         ""obj_inventory""
     ]
 }",cam_independent,Will each camera location be treated as an independent sample?,"TRUE, FALSE","YES, NO"
+,,,,,
+,,,,,
+,,,,,
