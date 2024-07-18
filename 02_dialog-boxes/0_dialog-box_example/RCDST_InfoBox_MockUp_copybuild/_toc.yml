@@ -1,7 +1,0 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
-format: jb-book
-root: intro
-chapters:
-- file: 1_pages/RCDST_MockUp_FocusGroups_2024-05-24.md

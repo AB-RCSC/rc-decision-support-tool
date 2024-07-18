@@ -1,6 +1,0 @@
-_build
-.ipynb_checkpoints
-.jupyter
-tests
-dir_to_ignore/ignore
-.ignore
