@@ -1,0 +1,8 @@
+progress_bar_num,progress_bar_id,progress_bar_text_id,progress_bar_text,progress_bar_icon_filename,progress_bar_code
+1,progress_bar_1,progress_bar_text_1,Objectives & Resources,icon_progress_bar_num1.png,"progress_bar_text_1==""Objectives & Resources"""
+2,progress_bar_2,progress_bar_text_2,Study area & Site selection constraints,icon_progress_bar_num2.png,"progress_bar_text_2==""Study area & Site selection constraints"""
+3,progress_bar_3,progress_bar_text_3,Duration & Timing,icon_progress_bar_num3.png,"progress_bar_text_3==""Duration & Timing"""
+4,progress_bar_4,progress_bar_text_4,Target species,icon_progress_bar_num4.png,"progress_bar_text_4==""Target species"""
+5,progress_bar_5,progress_bar_text_5,Equipment & Deployment,icon_progress_bar_num5.png,"progress_bar_text_5==""Equipment & Deployment"""
+6,progress_bar_6,progress_bar_text_6,Data & Analysis,icon_progress_bar_num6.png,"progress_bar_text_6==""Data & Analysis"""
+7,progress_bar_7,progress_bar_text_7,Recommendations,icon_progress_bar_num7.png,"progress_bar_text_7==""Recommendations"""
