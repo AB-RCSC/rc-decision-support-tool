@@ -1,1 +1,9 @@
-{"objective": "obj_inventory", "cam_strat_covar": "FALSE", "sp_hr_size": "NA", "cam_independent": "FALSE", "num_cams": "FALSE", "obj_targ_sp": "single", "sp_asymptote": "unkn", "surv_dur_mth_min": "FALSE", "surv_dur_mth_max": "FALSE", "sp_type": "ungulate", "sp_occ_restr": "unkn", "sp_info": "well", "sp_size": "lg"}
+{
+  "objective": "obj_unknown",
+  "num_cams_avail": 50,
+  "cam_strat_covar_num": 4,
+  "surv_dur_mth_min": 2,
+  "surv_dur_mth_max": 8,
+  "obj_targ_sp": "single",
+  "sp_rarity": "multiple"
+}
