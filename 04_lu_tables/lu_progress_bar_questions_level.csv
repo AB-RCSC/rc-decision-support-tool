@@ -1,0 +1,65 @@
+q_num,tool_level,tool_sublevel,progress_bar_id
+1,Entry point,-,progress_bar_1
+2,Define objectives & resources,Objective/State variable,progress_bar_1
+3a,Define objectives & resources,Resources,progress_bar_1
+3b,Define objectives & resources,Resources,progress_bar_1
+4,Project-level design,Study area extent and method of delineation,progress_bar_2
+5,Project-level design,Camera arrangement,progress_bar_2
+6a,Project-level design,Camera arrangement,progress_bar_2
+6b,Project-level design,Camera arrangement,progress_bar_2
+7,Project-level design,Camera arrangement,progress_bar_2
+8a,Project-level design,Survey duration,progress_bar_3
+8b,Project-level design,Survey duration,progress_bar_3
+9a,Project-level design,Survey duration,progress_bar_3
+9b,Project-level design,Survey duration,progress_bar_3
+10,Project-level design,Survey duration,progress_bar_3
+11,Project-level design,Survey duration,progress_bar_3
+12,Project-level design,Survey timing,progress_bar_3
+13,Target species,-,progress_bar_4
+14,Target species,-,progress_bar_4
+15,Target species,-,progress_bar_4
+16,Target species,-,progress_bar_4
+17,Target species,-,progress_bar_4
+18a,Target species,-,progress_bar_4
+18b,Target species,-,progress_bar_4
+20,Target species,-,progress_bar_4
+21,Target species,-,progress_bar_4
+22,Target species,-,progress_bar_4
+23,Target species,-,progress_bar_4
+24,Target species,-,progress_bar_4
+25,Target species,-,progress_bar_4
+26,Target species,-,progress_bar_4
+27,Target species,-,progress_bar_4
+28,Target species,-,progress_bar_4
+29,Target species,-,progress_bar_4
+30,Target species,-,progress_bar_4
+31,Target species,-,progress_bar_4
+32,Target species,-,progress_bar_4
+33,Target species,Multiple species,progress_bar_4
+34,Target species,Multiple species,progress_bar_4
+35,Target species,Multiple species,progress_bar_4
+36,Target species,Multiple species,progress_bar_4
+37,Target species,Multiple species,progress_bar_4
+38,Target species,Multiple species,progress_bar_4
+39,Target species,Multiple species,progress_bar_4
+40,Target species,Multiple species,progress_bar_4
+41,Deploy cameras & retrieve data,Camera hardware  & settings,progress_bar_5
+42,Deploy cameras & retrieve data,Camera hardware  & settings,progress_bar_5
+43,Deploy cameras & retrieve data,"Camera height, angle, and direction ",progress_bar_5
+44,Deploy cameras & retrieve data,"Camera height, angle, and direction ",progress_bar_5
+45,Deploy cameras & retrieve data,Attractants vs. no attractants,progress_bar_5
+46,Deploy cameras & retrieve data,Attractants vs. no attractants,progress_bar_5
+47,Deploy cameras & retrieve data,Target features ,progress_bar_5
+48,Deploy cameras & retrieve data,Target features ,progress_bar_5
+49,Data & analysis,Sample independence,progress_bar_5
+50,Data & analysis,Sample independence,progress_bar_5
+51,Data & analysis,Sample independence,progress_bar_5
+52,Data & analysis,Detection data,progress_bar_5
+53,Data & analysis,Detection data,progress_bar_5
+54,Data & analysis,Detection data,progress_bar_5
+55,Data & analysis,Detection data,progress_bar_5
+56,Data & analysis,Detection data,progress_bar_5
+57,Data & analysis,Detection data,progress_bar_5
+58,Data & analysis,Detection data,progress_bar_5
+59,Data & analysis,Detection data,progress_bar_5
+60,Data & analysis,Detection data,progress_bar_5
