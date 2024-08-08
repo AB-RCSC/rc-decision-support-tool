@@ -1,11 +1,39 @@
-﻿display_order,approach,display_temp_code_if_approach,display_temp_code_if_answers,cam_arrange,cam_spacing,num_cams,camdays_per_loc,cam_days_ttl,survey_duration
-1,mod_inventory,"approach==""mod_inventory""",NULL,cam_arrange_1,"cam_spacing_1
+﻿display_order,approach,user_answers,json_logic,cam_arrange,cam_spacing,num_cams,camdays_per_loc,cam_days_ttl,survey_duration
+1,mod_inventory,invalid,"{
+    ""approach"": [
+        ""mod_inventory""
+    ],
+    ""sp_info"": [
+        ""poor""
+    ],
+    ""sp_detprob_cat"": [
+        ""high""
+    ]
+}",cam_arrange_1,"cam_spacing_1
 cam_spacing_2","num_cams_1
 num_cams_2",camdays_per_loc_1,cam_days_ttl_1,survey_duration_1
-2,mod_inventory,"approach==""mod_inventory""","sp_info==""poor""",cam_arrange_2,,,,,
-8,mod_inventory,"approach==""mod_inventory""","sp_detprob_cat!=""high""",,,,camdays_per_loc_2,,
-9,mod_inventory,"approach==""mod_inventory""","sp_detprob_cat==""high""",,,,camdays_per_loc_3,,
-12,mod_divers_rich,"approach==""mod_divers_rich""",NULL,"cam_arrange_3
+2,mod_inventory,sp_info,,cam_arrange_2,,,,,
+8,mod_inventory,sp_detprob_cat!,,,,,camdays_per_loc_2,,
+9,mod_inventory,sp_detprob_cat,,,,,camdays_per_loc_3,,
+12,mod_divers_rich,NULL,"{
+    ""approach"": [
+        ""mod_divers_rich""
+    ],
+    ""num_cams_avail"": [
+        20
+    ],
+    ""cam_arrange"": [
+        ""Stratified"",
+        ""Stratified random""
+    ],
+    ""sp_asymptote"": [
+        ""TRUE""
+    ],
+    ""sp_size"": [
+        ""med"",
+        ""lg""
+    ]
+}","cam_arrange_3
 cam_arrange_4
 cam_arrange_5
 cam_arrange_6","cam_spacing_3
@@ -14,11 +42,30 @@ cam_spacing_5","num_cams_4
 num_cams_5
 num_cams_8",camdays_per_loc_4,"cam_days_ttl_2
 cam_days_ttl_3",survey_duration_2
-19,mod_divers_rich,"approach==""mod_divers_rich""",num_cams_avail>20,,,num_cams_3,,,
-22,mod_divers_rich,"approach==""mod_divers_rich""","cam_arrange%in% c(""Stratified"",""Stratified random"")",,,num_cams_6,,,
-23,mod_divers_rich,"approach==""mod_divers_rich""","sp_asymptote==""TRUE""",,,num_cams_7,,,
-29,mod_divers_rich,"approach==""mod_divers_rich""","sp_size %in% c(""med"",""lg"")",,,,,,survey_duration_3
-30,mod_occupancy,"approach==""mod_occupancy""",NULL,"cam_arrange_7
+19,mod_divers_rich,num_cams_avail,,,,num_cams_3,,,
+22,mod_divers_rich,cam_arrange,,,,num_cams_6,,,
+23,mod_divers_rich,sp_asymptote,,,,num_cams_7,,,
+29,mod_divers_rich,sp_size,,,,,,,survey_duration_3
+30,mod_occupancy,NULL,"{
+    ""approach"": [
+        ""mod_occupancy""
+    ],
+    ""data_hr"": [
+        ""TRUE"",
+        ""FALSE""
+    ],
+    ""num_cams_avail"": [
+        40
+    ],
+    ""sp_rarity"": [
+        ""rare"",
+        ""less common"",
+        ""common""
+    ],
+    ""sp_detprob_cat"": [
+        ""low""
+    ]
+}","cam_arrange_7
 cam_arrange_8
 cam_arrange_9
 cam_arrange_10",,"num_cams_10
@@ -26,17 +73,39 @@ num_cams_11",,"cam_days_ttl_4
 cam_days_ttl_5
 cam_days_ttl_6","survey_duration_4
 survey_duration_5"
-34,mod_occupancy,"approach==""mod_occupancy""","data_hr==""TRUE""",,cam_spacing_6,,,,
-35,mod_occupancy,"approach==""mod_occupancy""","data_hr==""FALSE""",,cam_spacing_7,,,,
-36,mod_occupancy,"approach==""mod_occupancy""",num_cams_avail>40),,,num_cams_9,,,
-39,mod_occupancy,"approach==""mod_occupancy""","sp_rarity==""common""",,,"num_cams_12
+34,mod_occupancy,data_hr_true,,,cam_spacing_6,,,,
+35,mod_occupancy,data_hr_false,,,cam_spacing_7,,,,
+36,mod_occupancy,num_cams_avail,,,,num_cams_9,,,
+39,mod_occupancy,sp_rarity_common,,,,"num_cams_12
 num_cams_13",,,
-41,mod_occupancy,"approach==""mod_occupancy""","sp_rarity==""rare""",,,num_cams_14,,,
-42,mod_occupancy,"approach==""mod_occupancy""","sp_rarity==""less common""",,,num_cams_15,,,
-43,mod_occupancy,"approach==""mod_occupancy""","sp_detprob_cat!=""low""",,,,camdays_per_loc_5,,
-44,mod_occupancy,"approach==""mod_occupancy""","sp_detprob_cat==""low""",,,,camdays_per_loc_6,,
-48,mod_occupancy,"approach==""mod_occupancy""","sp_detprob_cat==""low"" | sp_rarity=""rare""",,,,,cam_days_ttl_7,
-51,mod_rai,"approach==""mod_rai""",NULL,"cam_arrange_11
+41,mod_occupancy,sp_rarity_rare,,,,num_cams_14,,,
+42,mod_occupancy,sp_rarity_less_common,,,,num_cams_15,,,
+43,mod_occupancy,sp_detprob_cat!,,,,,camdays_per_loc_5,,
+44,mod_occupancy,sp_detprob_cat,,,,,camdays_per_loc_6,,
+48,mod_occupancy,sp_detprob_cat_sp_rarity,,,,,,cam_days_ttl_7,
+51,mod_rai,NULL,"{
+    ""approach"": [
+        ""mod_rai""
+    ],
+    ""user_entry"": [
+        ""analysis""
+    ],
+    ""num_cams_avail"": [
+        20
+    ],
+    ""num_det"": [
+        10, 20
+    ],
+    ""sp_type"": [
+        ""carnivore"", ""ungulate""
+    ],
+    ""sp_dense_low"": [
+        ""TRUE""
+    ],
+    ""sp_rarity"": [
+        ""rare"", ""very rare"", ""common""
+    ]
+}","cam_arrange_11
 cam_arrange_12","cam_spacing_8
 cam_spacing_9
 cam_spacing_10","num_cams_16
@@ -45,15 +114,31 @@ num_cams_19","camdays_per_loc_7
 camdays_per_loc_8
 camdays_per_loc_9",cam_days_ttl_8,"survey_duration_6
 survey_duration_7"
-57,mod_rai,"approach==""mod_rai""",num_cams_avail>20,,,num_cams_17,,,
-64,mod_rai,"approach==""mod_rai""","user_entry==""analysis"" & num_det>=10",,,,,cam_days_ttl_9,
-65,mod_rai,"approach==""mod_rai""","user_entry==""analysis"" & num_det>=20",,,,,cam_days_ttl_10,
-66,mod_rai,"approach==""mod_rai""","(sp_type==""carnivore"" & sp_dens_low==""TRUE"") | (sp_type==""ungulate"" & sp_rarity==""rare"")",,,,,cam_days_ttl_11,
-67,mod_rai,"approach==""mod_rai""","sp_rarity==""common""",,,,,cam_days_ttl_12,
-68,mod_rai,"approach==""mod_rai""","sp_rarity==""very-rare""",,,,,cam_days_ttl_13,
-305,mod_behaviour,"approach==""mod_behaviour""",NULL,"cam_arrange_60
+57,mod_rai,num_cams_avail,,,,num_cams_17,,,
+64,mod_rai,user_entry_num_det10,,,,,,cam_days_ttl_9,
+65,mod_rai,user_entry_num_det20,,,,,,cam_days_ttl_10,
+66,mod_rai,sp_type_sp_dens_low_sp_rarity,,,,,,cam_days_ttl_11,
+67,mod_rai,sp_rarity_common,,,,,,cam_days_ttl_12,
+68,mod_rai,sp_rarity_very_rare,,,,,,cam_days_ttl_13,
+305,mod_behaviour,NULL,"{
+    ""approach"": [
+        ""mod_behaviour""
+    ],
+    ""data_hr"": [
+        ""TRUE"",
+        ""FALSE""
+    ],
+    ""cam_arrange"": [
+        ""Stratified"",
+        ""Stratified random"",
+        ""Stratified targeted""
+    ],
+    ""cam_strat_covar_num"": [
+        0
+    ]
+}","cam_arrange_60
 cam_arrange_61
 cam_arrange_62",cam_spacing_51,num_cams_65,camdays_per_loc_48,cam_days_ttl_49,survey_duration_40
-309,mod_behaviour,"approach==""mod_behaviour""","data_hr==""TRUE""",,cam_spacing_52,,,,
-310,mod_behaviour,"approach==""mod_behaviour""","data_hr==""FALSE""",,cam_spacing_53,,,,
-312,mod_behaviour,"approach==""mod_behaviour""","cam_arrange%in% c(""Stratified"",""Stratified random"",""Stratified targeted"") & (cam_strat_covar_num>0)",,,num_cams_66,,,
+309,mod_behaviour,data_hr_true,,,cam_spacing_52,,,,
+310,mod_behaviour,data_hr_false,,,cam_spacing_53,,,,
+312,mod_behaviour,cam_arrange_ cam_strat_covar_num,,,,num_cams_66,,,
