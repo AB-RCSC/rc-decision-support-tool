@@ -1,6 +1,7 @@
 {
   "objective": "obj_unknown",
   "approach": "mod_inventory",
+  "sp_info": "poor",
   "num_cams_avail": 50,
   "cam_strat_covar_num": 4,
   "surv_dur_mth_min": 2,
