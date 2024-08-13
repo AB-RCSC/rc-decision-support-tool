@@ -109,6 +109,3 @@ cam_independent,"{
         ""obj_inventory""
     ]
 }",cam_independent,Will each camera location be treated as an independent sample?,"TRUE, FALSE","YES, NO"
-,,,,,
-,,,,,
-,,,,,
