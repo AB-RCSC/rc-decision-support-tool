@@ -13,7 +13,7 @@
 2,mod_inventory,sp_info,,cam_arrange_2,,,,,
 8,mod_inventory,sp_detprob_cat!,,,,,camdays_per_loc_2,,
 9,mod_inventory,sp_detprob_cat,,,,,camdays_per_loc_3,,
-12,mod_divers_rich,NULL,"{
+12,mod_divers_rich,invalid,"{
     ""approach"": [
         ""mod_divers_rich""
     ],
@@ -36,7 +36,7 @@
 22,mod_divers_rich,cam_arrange,,,,num_cams_6,,,
 23,mod_divers_rich,sp_asymptote,,,,num_cams_7,,,
 29,mod_divers_rich,sp_size,,,,,,,survey_duration_3
-30,mod_occupancy,NULL,"{
+30,mod_occupancy,invalid,"{
     ""approach"": [
         ""mod_occupancy""
     ],
@@ -65,7 +65,7 @@
 43,mod_occupancy,sp_detprob_cat!,,,,,camdays_per_loc_5,,
 44,mod_occupancy,sp_detprob_cat,,,,,camdays_per_loc_6,,
 48,mod_occupancy,sp_detprob_cat_sp_rarity,,,,,,cam_days_ttl_7,
-51,mod_rai,NULL,"{
+51,mod_rai,invalid,"{
     ""approach"": [
         ""mod_rai""
     ],
@@ -94,7 +94,7 @@
 66,mod_rai,sp_type_sp_dens_low_sp_rarity,,,,,,cam_days_ttl_11,
 67,mod_rai,sp_rarity_common,,,,,,cam_days_ttl_12,
 68,mod_rai,sp_rarity_very_rare,,,,,,cam_days_ttl_13,
-305,mod_behaviour,NULL,"{
+305,mod_behaviour,invalid,"{
     ""approach"": [
         ""mod_behaviour""
     ],
