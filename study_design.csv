@@ -9,10 +9,10 @@
     ""sp_detprob_cat"": [
         ""high""
     ]
-}",cam_arrange_1,"cam_spacing_1,cam_spacing_2","num_cams_1,num_cams_2",camdays_per_loc_1,cam_days_ttl_1,survey_duration_1
-2,mod_inventory,sp_info,,cam_arrange_2,,,,,
-8,mod_inventory,sp_detprob_cat!,,,,,camdays_per_loc_2,,
-9,mod_inventory,sp_detprob_cat,,,,,camdays_per_loc_3,,
+}",mod_inventory_cam_arrange_1,"mod_inventory_cam_spacing_1,mod_inventory_cam_spacing_2","mod_inventory_num_cams_1,mod_inventory_num_cams_2",mod_inventory_camdays_per_loc_1,mod_inventory_cam_days_ttl_1,mod_inventory_survey_duration_1
+2,mod_inventory,sp_info,,mod_inventory_cam_arrange_2,,,,,
+8,mod_inventory,sp_detprob_cat!,,,,,mod_inventory_camdays_per_loc_2,,
+9,mod_inventory,sp_detprob_cat,,,,,mod_inventory_camdays_per_loc_3,,
 12,mod_divers_rich,invalid,"{
     ""approach"": [
         ""mod_divers_rich""
@@ -31,11 +31,11 @@
         ""med"",
         ""lg""
     ]
-}","cam_arrange_3,cam_arrange_4,cam_arrange_5,cam_arrange_6","cam_spacing_3,cam_spacing_4,cam_spacing_5","num_cams_4,num_cams_5,num_cams_8",camdays_per_loc_4,"cam_days_ttl_2,cam_days_ttl_3",survey_duration_2
-19,mod_divers_rich,num_cams_avail,,,,num_cams_3,,,
-22,mod_divers_rich,cam_arrange,,,,num_cams_6,,,
-23,mod_divers_rich,sp_asymptote,,,,num_cams_7,,,
-29,mod_divers_rich,sp_size,,,,,,,survey_duration_3
+}","mod_divers_rich_cam_arrange_1,mod_divers_rich_cam_arrange_2,mod_divers_rich_cam_arrange_3,mod_divers_rich_cam_arrange_4","mod_divers_rich_cam_spacing_1,mod_divers_rich_cam_spacing_2,mod_divers_rich_cam_spacing_3","mod_divers_rich_num_cams_2,mod_divers_rich_num_cams_3,mod_divers_rich_num_cams_6",mod_divers_rich_camdays_per_loc_1,"mod_divers_rich_cam_days_ttl_1,mod_divers_rich_cam_days_ttl_2",mod_divers_rich_survey_duration_1
+19,mod_divers_rich,num_cams_avail,,,,mod_divers_rich_num_cams_1,,,
+22,mod_divers_rich,cam_arrange,,,,mod_divers_rich_num_cams_4,,,
+23,mod_divers_rich,sp_asymptote,,,,mod_divers_rich_num_cams_5,,,
+29,mod_divers_rich,sp_size,,,,,,,mod_divers_rich_survey_duration_2
 30,mod_occupancy,invalid,"{
     ""approach"": [
         ""mod_occupancy""
@@ -55,16 +55,16 @@
     ""sp_detprob_cat"": [
         ""low""
     ]
-}","cam_arrange_7,cam_arrange_8,cam_arrange_9,cam_arrange_10",,"num_cams_10,num_cams_11",,"cam_days_ttl_4,cam_days_ttl_5,cam_days_ttl_6","survey_duration_4,survey_duration_5"
-34,mod_occupancy,data_hr_true,,,cam_spacing_6,,,,
-35,mod_occupancy,data_hr_false,,,cam_spacing_7,,,,
-36,mod_occupancy,num_cams_avail,,,,num_cams_9,,,
-39,mod_occupancy,sp_rarity_common,,,,"num_cams_12,num_cams_13",,,
-41,mod_occupancy,sp_rarity_rare,,,,num_cams_14,,,
-42,mod_occupancy,sp_rarity_less_common,,,,num_cams_15,,,
-43,mod_occupancy,sp_detprob_cat!,,,,,camdays_per_loc_5,,
-44,mod_occupancy,sp_detprob_cat,,,,,camdays_per_loc_6,,
-48,mod_occupancy,sp_detprob_cat_sp_rarity,,,,,,cam_days_ttl_7,
+}","mod_occupancy_cam_arrange_1,mod_occupancy_cam_arrange_2,mod_occupancy_cam_arrange_3,mod_occupancy_cam_arrange_4",,"mod_occupancy_num_cams_2,mod_occupancy_num_cams_3",,"mod_occupancy_cam_days_ttl_1,mod_occupancy_cam_days_ttl_2,mod_occupancy_cam_days_ttl_3","mod_occupancy_survey_duration_1,mod_occupancy_survey_duration_2"
+34,mod_occupancy,data_hr_true,,,mod_occupancy_cam_spacing_1,,,,
+35,mod_occupancy,data_hr_false,,,mod_occupancy_cam_spacing_2,,,,
+36,mod_occupancy,num_cams_avail,,,,mod_occupancy_num_cams_1,,,
+39,mod_occupancy,sp_rarity_common,,,,"mod_occupancy_num_cams_4,mod_occupancy_num_cams_5",,,
+41,mod_occupancy,sp_rarity_rare,,,,mod_occupancy_num_cams_6,,,
+42,mod_occupancy,sp_rarity_less_common,,,,mod_occupancy_num_cams_7,,,
+43,mod_occupancy,sp_detprob_cat!,,,,,mod_occupancy_camdays_per_loc_1,,
+44,mod_occupancy,sp_detprob_cat,,,,,mod_occupancy_camdays_per_loc_1,,
+48,mod_occupancy,sp_detprob_cat_sp_rarity,,,,,,mod_occupancy_cam_days_ttl_4,
 51,mod_rai,invalid,"{
     ""approach"": [
         ""mod_rai""
@@ -87,13 +87,13 @@
     ""sp_rarity"": [
         ""rare"", ""very rare"", ""common""
     ]
-}","cam_arrange_11,cam_arrange_12","cam_spacing_8,cam_spacing_9,cam_spacing_10","num_cams_16,num_cams_18,num_cams_19","camdays_per_loc_7,camdays_per_loc_8,camdays_per_loc_9",cam_days_ttl_8,"survey_duration_6,survey_duration_7"
-57,mod_rai,num_cams_avail,,,,num_cams_17,,,
-64,mod_rai,user_entry_num_det10,,,,,,cam_days_ttl_9,
-65,mod_rai,user_entry_num_det20,,,,,,cam_days_ttl_10,
-66,mod_rai,sp_type_sp_dens_low_sp_rarity,,,,,,cam_days_ttl_11,
-67,mod_rai,sp_rarity_common,,,,,,cam_days_ttl_12,
-68,mod_rai,sp_rarity_very_rare,,,,,,cam_days_ttl_13,
+}","mod_rai_cam_arrange_1,mod_rai_cam_arrange_2","mod_rai_cam_spacing_1,mod_rai_cam_spacing_2,mod_rai_cam_spacing_3","mod_rai_num_cams_1,mod_rai_num_cams_3,mod_rai_num_cams_4","mod_rai_camdays_per_loc_1,mod_rai_camdays_per_loc_2,mod_rai_camdays_per_loc_3",mod_rai_cam_days_ttl_1,"mod_rai_survey_duration_1,mod_rai_survey_duration_2"
+57,mod_rai,num_cams_avail,,,,mod_rai_num_cams_2,,,
+64,mod_rai,user_entry_num_det10,,,,,,mod_rai_cam_days_ttl_2,
+65,mod_rai,user_entry_num_det20,,,,,,mod_rai_cam_days_ttl_3,
+66,mod_rai,sp_type_sp_dens_low_sp_rarity,,,,,,mod_rai_cam_days_ttl_4,
+67,mod_rai,sp_rarity_common,,,,,,mod_rai_cam_days_ttl_5,
+68,mod_rai,sp_rarity_very_rare,,,,,,mod_rai_cam_days_ttl_6,
 305,mod_behaviour,invalid,"{
     ""approach"": [
         ""mod_behaviour""
@@ -110,7 +110,7 @@
     ""cam_strat_covar_num"": [
         0
     ]
-}","cam_arrange_60,cam_arrange_61,cam_arrange_62",cam_spacing_51,num_cams_65,camdays_per_loc_48,cam_days_ttl_49,survey_duration_40
-309,mod_behaviour,data_hr_true,,,cam_spacing_52,,,,
-310,mod_behaviour,data_hr_false,,,cam_spacing_53,,,,
-312,mod_behaviour,cam_arrange_ cam_strat_covar_num,,,,num_cams_66,,,
+}","mod_behaviour_cam_arrange_1,mod_behaviour_cam_arrange_2,mod_behaviour_cam_arrange_3",mod_behaviour_cam_spacing_1,mod_behaviour_num_cams_1,mod_behaviour_camdays_per_loc_1,mod_behaviour_cam_days_ttl_1,mod_behaviour_survey_duration_1
+309,mod_behaviour,data_hr_true,,,mod_behaviour_cam_spacing_2,,,,
+310,mod_behaviour,data_hr_false,,,mod_behaviour_cam_spacing_3,,,,
+312,mod_behaviour,cam_arrange_ cam_strat_covar_num,,,,mod_behaviour_num_cams_2,,,
