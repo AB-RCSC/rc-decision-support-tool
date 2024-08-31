@@ -1,0 +1,22 @@
+type,button_text,question_notebook,field_code,info_url
+info box page,,cam_independent.ipynb,cam_independent,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_47_cam_independent.html#i_cam_independent
+info box page,,cam_strat_covar.ipynb,cam_strat_covar,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_06_cam_strat_covar.html#i_cam_strat_covar
+info box page,,num_cams.ipynb,num_cams,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_03_num_cams.html#i_num_cams
+info box page,,objective.ipynb,objective,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_02_objective.html#i_objective
+info box page,,obj_targ_sp.ipynb,obj_targ_sp,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_12_obj_targ_sp.html#i_obj_targ_sp
+info box page,,sp_asymptote.ipynb,sp_asymptote,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_10_sp_asymptote.html#i_sp_asymptote
+info box page,,sp_detprob_cat.ipynb,sp_detprob_cat,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_20_sp_detprob_cat.html#i_sp_detprob_cat
+info box page,,sp_hr_size.ipynb,sp_hr_size,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_17_sp_hr_size.html#i_sp_hr_size
+info box page,,sp_info.ipynb,sp_info,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_13_sp_info.html#i_sp_info
+info box page,,sp_occ_restr.ipynb,sp_occ_restr,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_16_sp_occ_restr.html#i_sp_occ_restr
+info box page,,sp_rarity.ipynb,sp_rarity,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_19_sp_rarity.html#i_sp_rarity
+info box page,,sp_size.ipynb,sp_size,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_18_sp_size.html#i_sp_size
+info box page,,sp_type.ipynb,sp_type,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_14_sp_type.html#i_sp_type
+info box page,,surv_dur_min_max.ipynb,surv_dur_min_max,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_08_surv_dur_min_max.html#i_surv_dur_min_max
+sidebar_button,Objectives & Resources,,,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/#objectives-resources
+sidebar_button,Study area & Site selection constraints,,,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/#study-area-site-selection-constraints
+sidebar_button,Duration & Timing,,,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/#duration-timing
+sidebar_button,Target species,,,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/#target-species
+sidebar_button,Equipment & Deployment,,,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/#equipment-deployment
+sidebar_button,Data & Analysis,,,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/#data-analysis
+sidebar_button,Concept library,,,https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/#concept-library
