@@ -9,9 +9,9 @@
     ""sp_detprob_cat"": [
         ""high""
     ]
-}",mod_inventory_cam_arrange_1,"mod_inventory_cam_spacing_1,mod_inventory_cam_spacing_2","mod_inventory_num_cams_1,mod_inventory_num_cams_2",mod_inventory_camdays_per_loc_1,mod_inventory_cam_days_ttl_1,mod_inventory_survey_duration_1
+}",mod_inventory_cam_arrange_1,"mod_inventory_cam_spacing_1,mod_inventory_cam_spacing_2","mod_inventory_num_cams_1,mod_inventory_num_cams_2",mod_inventory_camdays per loc 1,mod_inventory_cam_days_ttl_1,mod_inventory_survey_duration_1
 2,mod_inventory,sp_info,,mod_inventory_cam_arrange_2,,,,,
-8,mod_inventory,sp_detprob_cat!,,,,,mod_inventory_camdays_per_loc_2,,
+8,mod_inventory,sp_detprob_cat!,,,,,mod_inventory_camdays per loc 2,,
 9,mod_inventory,sp_detprob_cat,,,,,mod_inventory_camdays_per_loc_3,,
 12,mod_divers_rich,invalid,"{
     ""approach"": [
