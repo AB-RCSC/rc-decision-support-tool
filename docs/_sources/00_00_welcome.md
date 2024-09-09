@@ -121,7 +121,7 @@ Study design recommendations will be generated from as a standardized report tha
 
 <font size="3"><b>📷 How does it work!?</font></b>
 
-This tool aims to support your decision-making process when designing a remote camera programs by guiding you through a series of decision points related to your study in the form of an interactive flow chart.
+This tool aims to support your decision-making process when designing a remote camera program by guiding you through a series of decision points related to your study in the form of an interactive flow chart.
 
 Once you have answered all of the questions, study design recommendations will be generated from your selections, which will include the following:
 
@@ -197,14 +197,14 @@ At each step, you will be able to access information related to the question in 
 :::::::
 
 :::::::{dropdown} 📉 Information formats
-Information is available in the following tabs of the "info pop-ups":
+Information is available in the following tabs of the "info popups":
 - **Overview** (default) \- short, digestible information about the topic.
 
 - **Advanced** \- detailed descriptions; more “in the weeds” information for those who want to dig into the details.
 
-- **Visual resources** \- related figures and videos; you can watch videos within in tool itself, or click on the links within the embedded video to open Youtube.
+- **Visual resources** \- related figures and videos; you can watch videos within in tool itself or click on the links within the embedded video to open YouTube.
 
-- **Shiny apps/Widgets** \- access externally created apps already hosted online. Note that the apps included in the tabbed content mainly serve a supplemental material, however we will are developing in Shiny apps/Widgets that more directly support users’ answering of a specific question and that can help to tailor recommendations to users' needs more specifically via simulation-based (apps). Refer to the next section for more information.
+- **Shiny apps/Widgets** \- access externally created apps already hosted online. Note that the apps included in the tabbed content mainly serve a supplemental material, however we are developing in Shiny apps/Widgets that more directly support users’ answering of a specific question and that can help to tailor recommendations to users' needs more specifically via simulation-based (apps). Refer to the next section for more information.
 
 - **Analytical tools & resources** \- resources for implementing analyses provided as links to R packages or scripts.
 
@@ -217,7 +217,7 @@ Information is available in the following tabs of the "info pop-ups":
 :::::::
 
 :::::::{dropdown} 🚀 Shiny apps/Widgets in development
-Currently, integrated apps are mostly "illustrative" (for the purpose of illustrating a concept), however, there are a few ((more intregrated)) apps in development, which include the following:
+Currently, integrated apps are mostly "illustrative" (for the purpose of illustrating a concept), however, there are a few more intregrated apps in development, which include the following:
 
 **Directly support answering of a specific question**:
 - lookup home range size information from multiple sources
