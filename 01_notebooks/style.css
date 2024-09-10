@@ -41,3 +41,21 @@
 .custom-vbox {
         background-color: #E8E8E8;
     }
+
+.mod-header-button {
+    white-space: normal;
+    line-height: 1.5;
+    font-size: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.recom-opt-button {
+    white-space: normal;
+    line-height: 1.5;
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
