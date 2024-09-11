@@ -14,17 +14,6 @@ editor_options:
   markdown:
     wrap: none
 ---
-
-<style>
-  h1 {
-    font-size: 2rem;font-weight: bold;
-  }
-  h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2F5496
-  }
-</style>
 # Welcome to the Remote Camera Decision Support Tool!
 
 :::::{grid} 2
@@ -48,7 +37,7 @@ editor_options:
 <br>
 
 :::{figure} ./logo.png
-:width: 100px
+:width: 100%
 :align: left
 :::
 
@@ -58,6 +47,7 @@ editor_options:
 :align: center
 Launch the tool
 ```
+ <!--#00827b-->
 ```{button-link} https://ab-rcsc.github.io/rc-decision-support-tool_concept-library
 :color: primary
 :shadow:
