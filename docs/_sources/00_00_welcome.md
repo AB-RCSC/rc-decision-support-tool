@@ -14,17 +14,6 @@ editor_options:
   markdown:
     wrap: none
 ---
-
-<style>
-  h1 {
-    font-size: 2rem;font-weight: bold;
-  }
-  h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2F5496
-  }
-</style>
 # Welcome to the Remote Camera Decision Support Tool!
 
 :::::{grid} 2
@@ -48,7 +37,7 @@ editor_options:
 <br>
 
 :::{figure} ./logo.png
-:width: 100px
+:width: 100%
 :align: left
 :::
 
@@ -58,6 +47,7 @@ editor_options:
 :align: center
 Launch the tool
 ```
+ <!--#00827b-->
 ```{button-link} https://ab-rcsc.github.io/rc-decision-support-tool_concept-library
 :color: primary
 :shadow:
@@ -294,6 +284,8 @@ If you have questions or would like further information, or if you have feedback
 <iframe id="JotFormIFrame-241017573726052" title="Contact us" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/241017573726052" frameborder="0" style="min-width:75%;max-width:76%;height:300px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241017573726052']", "https://form.jotform.com/")</script></center>
 
 :::::::
+
+***
 
 :::::::{grid} 5
 :gutter: 1
