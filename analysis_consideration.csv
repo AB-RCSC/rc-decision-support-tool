@@ -1,4 +1,9 @@
 ﻿demo,field_present,field_code,analysis_consideration_condition,analysis_consideration_code,analysis_consideration_text
+TRUE-PRI1,TRUE-PRI1,sp_size,"{
+    ""sp_size"": [
+        ""multiple""
+    ]
+}",c_sp_size_multi,[c_sp_size_multi; this is placeholder text]
 TRUE-PRI1,TRUE-PRI1,cam_strat_covar,"{
     ""cam_strat_covar_num"": 0
 }",c_cam_strat_covar,[c_cam_strat_covar; this is placeholder text]
@@ -10,8 +15,7 @@ TRUE-PRI1,TRUE-PRI1,mod_rai,"{
 }",c_mod_rai,"[c_obj_targ_sp; this is placeholder text ; approach==""mod_rai"" & overdispersion==""TRUE"" & zeroinflation==""FALSE""]"
 TRUE-PRI1,TRUE-PRI1,obj_targ_sp,"{
     ""obj_targ_sp"": [
-        ""YES"",
-        ""unkn""
+        ""multiple""
     ]
 }",c_obj_targ_sp,[c_obj_targ_sp; this is placeholder text]
 TRUE-PRI1,TRUE-PRI1,sp_detprob_cat,"{
