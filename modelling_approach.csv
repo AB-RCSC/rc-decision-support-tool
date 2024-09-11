@@ -1,4 +1,4 @@
-﻿demo,approach,objective,num_cams_avail,obj_json,num_cams_json
+﻿demo,approach,objective,num_cams_avail,obj_json,num_cams_json,cam_independent_json
 TRUE-PRI1,mod_behaviour,"objective %in% c(""obj_behaviour"",""obj_unknown"")",num_cams_avail>0,"{
     ""objective"": [
         ""obj_behaviour"",
@@ -6,7 +6,7 @@ TRUE-PRI1,mod_behaviour,"objective %in% c(""obj_behaviour"",""obj_unknown"")",nu
     ]
 }","{
     ""num_cams_avail"": 0
-}"
+}",
 TRUE-PRI1,mod_divers_rich,"objective %in% c(""obj_divers_rich"",""obj_unknown"")",num_cams_avail>20,"{
     ""objective"": [
         ""obj_divers_rich"",
@@ -14,6 +14,10 @@ TRUE-PRI1,mod_divers_rich,"objective %in% c(""obj_divers_rich"",""obj_unknown"")
     ]
 }","{
     ""num_cams_avail"": 20
+}","{
+    ""cam_independent"": [
+        ""TRUE""
+    ]
 }"
 TRUE-PRI1,mod_inventory,"objective %in% c(""obj_inventory"",""obj_unknown"")",num_cams_avail>0,"{
     ""objective"": [
@@ -22,7 +26,7 @@ TRUE-PRI1,mod_inventory,"objective %in% c(""obj_inventory"",""obj_unknown"")",nu
     ]
 }","{
     ""num_cams_avail"": 0
-}"
+}",
 TRUE-PRI1,mod_occupancy,"objective %in% c(""obj_occupancy"",""obj_unknown"")",num_cams_avail>40,"{
     ""objective"": [
         ""obj_occupancy"",
@@ -30,6 +34,10 @@ TRUE-PRI1,mod_occupancy,"objective %in% c(""obj_occupancy"",""obj_unknown"")",nu
     ]
 }","{
     ""num_cams_avail"": 40
+}","{
+    ""cam_independent"": [
+        ""TRUE""
+    ]
 }"
 TRUE-PRI1,mod_rai,"objective %in% c(""obj_rel_abund"",""obj_unknown"")",num_cams_avail>20,"{
     ""objective"": [
@@ -38,4 +46,4 @@ TRUE-PRI1,mod_rai,"objective %in% c(""obj_rel_abund"",""obj_unknown"")",num_cams
     ]
 }","{
     ""num_cams_avail"": 20
-}"
+}",
