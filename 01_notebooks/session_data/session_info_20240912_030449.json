@@ -1,0 +1,13 @@
+{
+    "objective": "obj_unknown",
+    "num_cams_limited": "FALSE",
+    "num_cams_avail": 999999,
+    "surv_dur_mth_min": "FALSE",
+    "surv_dur_mth_max": "FALSE",
+    "obj_targ_sp": "single",
+    "approach": [
+        "mod_inventory",
+        "mod_rai",
+        "mod_behaviour"
+    ]
+}
