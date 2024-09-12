@@ -8,7 +8,8 @@ cam_strat_covar,"{
         ""obj_rel_abund"",
         ""obj_behaviour""
     ]
-}",cam_strat_covar,"Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance)","TRUE, FALSE","YES, NO"
+}",cam_strat_covar,"Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance). If so, how many covariates?
+(e.g., 5 different habitat types would be 5 covariates)","TRUE, FALSE","YES, NO"
 cam_strat_covar,"{
     ""objective"": [
         ""obj_divers_rich"",
