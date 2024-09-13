@@ -1,7 +1,1 @@
-{
-  "num_cams_limited": "TRUE",
-  "num_cams_avail": 99,
-  "objective": "obj_unknown",
-  "surv_dur_mth_min": "FALSE",
-  "surv_dur_mth_max": 4
-}
+{"num_cams_limited": "TRUE", "num_cams_avail": 99, "objective": "obj_inventory", "surv_dur_mth_min": "FALSE", "surv_dur_mth_max": 4, "approach": ["mod_inventory"]}
