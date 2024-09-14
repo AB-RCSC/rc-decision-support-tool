@@ -1,8 +1,11 @@
 .ques-button {
     white-space: normal;
     font-size: 15px !important;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
-    padding: 50px;
+    padding: 20px;
+    text-align: left;
 }
 
 .opt-button {
@@ -54,7 +57,7 @@
 .recom-opt-button {
     white-space: normal;
     line-height: 1.5;
-    font-size: 17px;
+    font-size: 15px;
     padding: 5px;
     border-radius: 10px;
 }

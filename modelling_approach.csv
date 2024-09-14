@@ -1,5 +1,5 @@
-﻿demo,approach,objective,num_cams_avail,obj_json,num_cams_json,cam_independent_json
-TRUE-PRI1,mod_behaviour,"objective %in% c(""obj_behaviour"",""obj_unknown"")",num_cams_avail>0,"{
+﻿demo,approach,approach_fulltext,objective,num_cams_avail,obj_json,num_cams_json,cam_independent_json
+TRUE-PRI1,mod_behaviour,Behaviour,"objective %in% c(""obj_behaviour"",""obj_unknown"")",num_cams_avail>0,"{
     ""objective"": [
         ""obj_behaviour"",
         ""obj_unknown""
@@ -7,7 +7,7 @@ TRUE-PRI1,mod_behaviour,"objective %in% c(""obj_behaviour"",""obj_unknown"")",nu
 }","{
     ""num_cams_avail"": 0
 }",
-TRUE-PRI1,mod_divers_rich,"objective %in% c(""obj_divers_rich"",""obj_unknown"")",num_cams_avail>20,"{
+TRUE-PRI1,mod_divers_rich,Species diversity & richness,"objective %in% c(""obj_divers_rich"",""obj_unknown"")",num_cams_avail>20,"{
     ""objective"": [
         ""obj_divers_rich"",
         ""obj_unknown""
@@ -19,7 +19,7 @@ TRUE-PRI1,mod_divers_rich,"objective %in% c(""obj_divers_rich"",""obj_unknown"")
         ""TRUE""
     ]
 }"
-TRUE-PRI1,mod_inventory,"objective %in% c(""obj_inventory"",""obj_unknown"")",num_cams_avail>0,"{
+TRUE-PRI1,mod_inventory,Species inventory,"objective %in% c(""obj_inventory"",""obj_unknown"")",num_cams_avail>0,"{
     ""objective"": [
         ""obj_inventory"",
         ""obj_unknown""
@@ -27,7 +27,7 @@ TRUE-PRI1,mod_inventory,"objective %in% c(""obj_inventory"",""obj_unknown"")",nu
 }","{
     ""num_cams_avail"": 0
 }",
-TRUE-PRI1,mod_occupancy,"objective %in% c(""obj_occupancy"",""obj_unknown"")",num_cams_avail>40,"{
+TRUE-PRI1,mod_occupancy,Occupancy,"objective %in% c(""obj_occupancy"",""obj_unknown"")",num_cams_avail>40,"{
     ""objective"": [
         ""obj_occupancy"",
         ""obj_unknown""
@@ -39,7 +39,7 @@ TRUE-PRI1,mod_occupancy,"objective %in% c(""obj_occupancy"",""obj_unknown"")",nu
         ""TRUE""
     ]
 }"
-TRUE-PRI1,mod_rai,"objective %in% c(""obj_rel_abund"",""obj_unknown"")",num_cams_avail>20,"{
+TRUE-PRI1,mod_rai,Relative abundance indices,"objective %in% c(""obj_rel_abund"",""obj_unknown"")",num_cams_avail>20,"{
     ""objective"": [
         ""obj_rel_abund"",
         ""obj_unknown""
