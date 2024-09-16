@@ -1,32 +1,32 @@
-﻿demo,field_present,field_code,analysis_consideration_condition,analysis_consideration_code,analysis_consideration_text
+﻿demo,field_present,field_code,analysis_consideration_condition,analysis_consideration_code,analysis_consideration_text,analysis_consideration_placeholder
 TRUE-PRI1,TRUE-PRI1,sp_size,"{
     ""sp_size"": [
         ""multiple""
     ]
-}",c_sp_size_multi,[c_sp_size_multi; this is placeholder text]
+}",c_sp_size_multi,"Because you chose... <b>Target species – Body size: “Multiple” or “Unknown”</b><br>Correct for variable body size of your target species by including body mass and diet as variables in analysis (O’Brien, Kinnaird, and Wibisono 2011; Hofmeester et al., 2019).",[c_sp_size_multi; this is placeholder text]
 TRUE-PRI1,TRUE-PRI1,cam_strat_covar,"{
     ""cam_strat_covar_num"": 0
-}",c_cam_strat_covar,[c_cam_strat_covar; this is placeholder text]
+}",c_cam_strat_covar,[c_cam_strat_covar; this is placeholder text],[c_cam_strat_covar; this is placeholder text]
 TRUE-PRI1,TRUE-PRI1,mod_rai,"{
     ""objective"": [
         ""obj_rel_abund"",
         ""obj_unknown""
     ]
-}",c_mod_rai,"[c_obj_targ_sp; this is placeholder text ; approach==""mod_rai"" & overdispersion==""TRUE"" & zeroinflation==""FALSE""]"
+}",c_mod_rai,"Because you chose... <b>State variable: “Relative abundance” or “Unknown”: </b><br>Note that when you reach the analysis stage, you will want to select a count model method that most appropriately accounts for “Zero-inflation” and “Overdispersion” (see section XXX [not yet present] for more information). See also “Mixed models” (section XXX [not yet present]).","[c_obj_targ_sp; this is placeholder text ; approach==""mod_rai"" & overdispersion==""TRUE"" & zeroinflation==""FALSE""]"
 TRUE-PRI1,TRUE-PRI1,obj_targ_sp,"{
     ""obj_targ_sp"": [
         ""multiple""
     ]
-}",c_obj_targ_sp,[c_obj_targ_sp; this is placeholder text]
+}",c_obj_targ_sp,[c_obj_targ_sp; this is placeholder text],[c_obj_targ_sp; this is placeholder text]
 TRUE-PRI1,TRUE-PRI1,sp_detprob_cat,"{
     ""sp_detprob_cat"": [
         ""unkn"",
         ""multiple""
     ]
-}",c_sp_detprob_cat,[c_sp_detprob_cat; this is placeholder text]
+}",c_sp_detprob_cat,"Because you chose... <b>Target species - Detection probability: “Multiple” or “Unknown”</b><br>Ensure that the modelling method used accounts for variable detection of probability of the target species; this might include (but is not limited to) body size, movement speed, behaviour. What is most important to consider will also depend on your modelling approach (e.g., movement speed will matter less for Instantaneous Sampling than for Time in front of the Camera) [adjustments in future].",[c_sp_detprob_cat; this is placeholder text]
 TRUE-PRI1,TRUE-PRI1,sp_rarity,"{
     ""sp_rarity"": [
         ""unkn"",
         ""multiple""
     ]
-}",c_sp_rarity,[c_sp_rarity; this is placeholder text]
+}",c_sp_rarity,"Because you chose... <b>Target species – Rarity: “Multiple” or “Unknown”:</b><br>Ensure that your study design options and modelling methods are appropriate for the full spectrum of species’ rarity of your Target Species (e.g.,  if common <--> rare and if faced with multiple options, choose a more conservative survey length to ensure that cameras are deployed long enough to detect rare species; in analysis.....[coming soon]) ",[c_sp_rarity; this is placeholder text]
