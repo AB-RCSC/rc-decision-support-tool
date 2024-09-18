@@ -34,10 +34,6 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/tippy.css?v=4bf7045a" />
-    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/tippy-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=576ece76" />
-    <link rel="stylesheet" type="text/css" href="_static/css/.ipynb_checkpoints/custom-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -283,7 +279,32 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-remote-camera-decision-support-tool">
+  <style>
+.bd-main .bd-content .bd-article-container {
+    max-width: 80%;  /* default is 60em */
+  }
+.bd-page-width {
+    max-width: 80%;  /* default is 88rem */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2F5496
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: italic;
+    color: #2F5496
+}
+</style>
+<section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-remote-camera-decision-support-tool">
 <h1>Welcome to the Remote Camera Decision Support Tool!<a class="headerlink" href="#welcome-to-the-remote-camera-decision-support-tool" title="Link to this heading">#</a></h1>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
@@ -408,6 +429,15 @@ Analysis considerations</div>
 </div>
 </div>
 </details><p class="sd-card-text">At each step, you will be able to access information related to the question in the “info popups” that include tabs with information explained with different levels of complexity (overview vs. advanced) and accessible formats (e.g., figures, videos, Shiny apps, etc.), as well analytical tools and resources. Click on the next dropdown to learn more.</p>
+<p class="sd-card-text"><font size="3"><b>Question framework</font></b></p>
+<p class="sd-card-text">All questions in the tool have been created to be able to support populating recommendations from a static (non-changing) set of options created from the literature. The main sources include:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Modifiers in Appendix A - Table A2 of the Remote Camera Survey Guidelines (RCSC et al., 2024)) (e.g., recommendations for the number of cameras required while considering species rarity)</p></li>
+<li><p class="sd-card-text">Clarke et al. (2023)’s “Density Handbook”</p></li>
+<li><p class="sd-card-text">Hofmeester et al.’s (2019) “Figure 2. Questions that lead to selection of covariates for correction in detection…”.</p></li>
+<li><p class="sd-card-text">Other resources with less significant influence</p></li>
+</ul>
+<p class="sd-card-text">There has ebeen a great interest among the members of the development working group in integrating simulations more directly (e.g., via R Shiny apps that feed into the decision tool branches); we also anticipated that the remote camera community would also find this valuable. We have identified two modeling approaches to “build-out” as more simulation-driven integrations that serve as our trial development modeling approaches. Please refer to <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="dev_apps_sim"><span>Simulation-driven apps</span></a> below.</p>
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -428,20 +458,22 @@ Analysis considerations</div>
 </div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details><section id="development">
+<span id="dev"></span><h2>Development<a class="headerlink" href="#development" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">🚀 Shiny apps/Widgets in development</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Currently, integrated apps are mostly “illustrative” (for the purpose of illustrating a concept), however, there are a few more intregrated apps in development, which include the following:</p>
 <p class="sd-card-text"><strong>Directly support answering of a specific question</strong>:</p>
 <ul class="simple">
-<li><p class="sd-card-text">lookup home range size information from multiple sources</p></li>
+<li><p class="sd-card-text">[ACTIVE] lookup home range size information from multiple sources</p></li>
 </ul>
 <p class="sd-card-text"><strong>User tools</strong>:</p>
 <ul class="simple">
-<li><p class="sd-card-text">populate detection rate from tagged data, and</p></li>
-<li><p class="sd-card-text">graph detections / detection rates in multiple formats</p></li>
+<li><p class="sd-card-text">[In development] populate detection rate from tagged data, and</p></li>
+<li><p class="sd-card-text">[In development] graph detections / detection rates in multiple formats</p></li>
 </ul>
-<p class="sd-card-text"><strong>Simulation-driven apps</strong>:
+<p class="sd-card-text" id="dev-apps-sim"><strong>Simulation-driven apps</strong>:
 <strong>Occupancy - Spatial power analysis</strong><br>
 (<em>In development by Dr. Eric Nielsen (Wildlife Research Scientist, Canadian Forest Service; Committee Member, RCSC)</em>)</p>
 <figure class="align-center">
@@ -501,15 +533,43 @@ Additionally, just as the documents upon which this tool is based are meant to e
 <p class="sd-card-text">Please refer back; we will update this section continually.</p>
 </div>
 </details><hr class="docutils" />
+</section>
 <section id="contact-us">
-<h2>Contact us<a class="headerlink" href="#contact-us" title="Link to this heading">#</a></h2>
+<span id="id1"></span><h2>Contact us<a class="headerlink" href="#contact-us" title="Link to this heading">#</a></h2>
 <!--If you have questions or would like further information, please contact Cassie Stevenson, Alberta Remote Camera Steering Committee (RCSC) / Alberta Biodiversity Monitoring Institute (ABMI), <abwildlifecameras@gmail.com>; <cjsteven@ualberta.ca>.-->
 <p>If you have questions or would like further information, or if you have feedback or a feature request, please contact us. We’ll get in touch as soon as we can.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">&gt;&gt;&gt;</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<center>
-<iframe id="JotFormIFrame-241017573726052" title="Contact us" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/241017573726052" frameborder="0" style="min-width:75%;max-width:76%;height:300px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241017573726052']", "https://form.jotform.com/")</script></center>
+<span class="sd-summary-text">Question, feedback, or feature request?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div align="center"><iframe id="JotFormIFrame-241017573726052" title="Contact us" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/241017573726052" frameborder="0" style="min-width:100%;max-width:100%;height:300px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241017573726052']", "https://form.jotform.com/")</script></div>
+</div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Have resources to contribute?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div align="center">
+    <iframe
+      id="JotFormIFrame-242607211652247"
+      title="RC Tool User Submissions"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen"
+      src="https://form.jotform.com/242607211652247"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:300px;border:none;"
+      scrolling="no"
+    >
+    </iframe>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242607211652247']", "https://form.jotform.com/")</script>
+</div>
+</div>
+</div>
 </div>
 </details><hr class="docutils" />
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
