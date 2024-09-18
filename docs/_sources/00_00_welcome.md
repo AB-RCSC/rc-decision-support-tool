@@ -14,6 +14,31 @@ editor_options:
   markdown:
     wrap: none
 ---
+<style>
+.bd-main .bd-content .bd-article-container {
+    max-width: 85%;  /* default is 60em */
+  }
+.bd-page-width {
+    max-width: 85%;  /* default is 88rem */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2F5496
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: italic;
+    color: #2F5496
+}
+</style>
 # Welcome to the Remote Camera Decision Support Tool!
 
 :::::{grid} 2
@@ -68,7 +93,6 @@ These standards and guidelines provide guidance on the types of data that should
 - **novel approaches to engage remote camera users to ensure** resources are available and accessible, and representative of the needs of diverse remote camera users throughout Western Canada, and
 - **novel approaches to disseminate information to remote camera users** since there are many groups of remote camera users in Western Canada with diverse objectives and varying levels of expertise, access to information (e.g., publications), and constraints in the delivery of remote camera programs (e.g., digital data and broadband issues, scientific literacy, etc.), as well as differing scales of study or capacity.
 
-
 **<font size="4"><span style="color:#2F5496">Objective</font></span>**
 
 This project aims to mobilize the knowledge outlined in the [Remote Camera Metadata Standards for Alberta](https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/2_metadata-standards/2_0.1_Citation-and-Info.html) (RCSC, 2023) and [Remote Camera Survey Guidelines](https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_0.1_Citation-and-Info.html) (RCSC et al., 2023) to create a freely available, interactive, accessible online tool (i.e., the “**Remote Camera Decision Support Tool**”). This tool will guide users through choices encountered when designing a remote camera study, suggest design choices, and provide related resources.
@@ -76,7 +100,6 @@ This project aims to mobilize the knowledge outlined in the [Remote Camera Metad
 Users will be guided through a series of decision points related to their study. At each step, users will be able to access information related to the question itself, the impacts of the various choices on study design, or important related topics via “pop-up” boxes; information tabs include multiple tabs for information in different levels of complexity (new vs. advanced user) and formats (e.g., descriptions, figures, videos, Shiny apps, etc.).
 
 Study design recommendations will be generated from as a standardized report that will include: a) appropriate modelling approach(es) (e.g., density – spatially explicit capture-recapture), a b) study design recommendations (e.g., camera spacing, number of cameras, etc.), and c) analysis considerations (e.g., variables to consider in your analysis to reduce bias). 
-
 
 ::::::{dropdown} Sparknotes rationale
 
@@ -184,6 +207,15 @@ Once you have answered all of the questions, study design recommendations will b
 
 At each step, you will be able to access information related to the question in the “info popups” that include tabs with information explained with different levels of complexity (overview vs. advanced) and accessible formats (e.g., figures, videos, Shiny apps, etc.), as well analytical tools and resources. Click on the next dropdown to learn more.
 
+<font size="3"><b>Question framework</font></b>
+
+All questions in the tool have been created to be able to support populating recommendations from a static (non-changing) set of options created from the literature. The main sources include:
+- Modifiers in Appendix A - Table A2 of the Remote Camera Survey Guidelines (RCSC et al., 2024)) (e.g., recommendations for the number of cameras required while considering species rarity)
+- Clarke et al. (2023)’s “Density Handbook”
+- Hofmeester et al.’s (2019) “Figure 2. Questions that lead to selection of covariates for correction in detection...”.
+- Other resources with less significant influence
+
+There has ebeen a great interest among the members of the development working group in integrating simulations more directly (e.g., via R Shiny apps that feed into the decision tool branches); we also anticipated that the remote camera community would also find this valuable. We have identified two modeling approaches to “build-out” as more simulation-driven integrations that serve as our trial development modeling approaches. Please refer to {bdg-link-primary-line}`Simulation-driven apps<dev_apps_sim>` below.
 :::::::
 
 :::::::{dropdown} 📉 Information formats
@@ -206,16 +238,19 @@ Information is available in the following tabs of the "info popups":
 
 :::::::
 
+(dev)=
+## Development
 :::::::{dropdown} 🚀 Shiny apps/Widgets in development
 Currently, integrated apps are mostly "illustrative" (for the purpose of illustrating a concept), however, there are a few more intregrated apps in development, which include the following:
 
 **Directly support answering of a specific question**:
-- lookup home range size information from multiple sources
+- \[ACTIVE\] lookup home range size information from multiple sources
 
 **User tools**:
-- populate detection rate from tagged data, and 
-- graph detections / detection rates in multiple formats
+- \[In development\] populate detection rate from tagged data, and 
+- \[In development\] graph detections / detection rates in multiple formats
 
+(#dev_apps_sim)=
 **Simulation-driven apps**:
 **Occupancy - Spatial power analysis**<br>
 (*In development by Dr. Eric Nielsen (Wildlife Research Scientist, Canadian Forest Service; Committee Member, RCSC)*)
@@ -270,19 +305,42 @@ Appropriate modelling approach(es)
 📉 Information formats
 - Executable Code \- We also aim to include an “Executable code” tab in future. 
 
+
+
 Please refer back; we will update this section continually.
 :::::::
 
 ***
-
+(contact-us)=
 ## Contact us
 <!--If you have questions or would like further information, please contact Cassie Stevenson, Alberta Remote Camera Steering Committee (RCSC) / Alberta Biodiversity Monitoring Institute (ABMI), <abwildlifecameras@gmail.com>; <cjsteven@ualberta.ca>.-->
 If you have questions or would like further information, or if you have feedback or a feature request, please contact us. We'll get in touch as soon as we can.
 
-:::::::{dropdown} >>>
-<center>
-<iframe id="JotFormIFrame-241017573726052" title="Contact us" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/241017573726052" frameborder="0" style="min-width:75%;max-width:76%;height:300px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241017573726052']", "https://form.jotform.com/")</script></center>
+:::::::{dropdown} Question, feedback, or feature request?
+::::::{card}
+<div align="center"><iframe id="JotFormIFrame-241017573726052" title="Contact us" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/241017573726052" frameborder="0" style="min-width:100%;max-width:100%;height:300px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241017573726052']", "https://form.jotform.com/")</script></div>
+::::::
+:::::::
 
+:::::::{dropdown} Have resources to contribute?
+::::::{card}
+<div align="center">
+    <iframe
+      id="JotFormIFrame-242607211652247"
+      title="RC Tool User Submissions"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen"
+      src="https://form.jotform.com/242607211652247"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:300px;border:none;"
+      scrolling="no"
+    >
+    </iframe>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242607211652247']", "https://form.jotform.com/")</script>
+</div>
+::::::
 :::::::
 
 ***
