@@ -6,7 +6,8 @@ cam_strat_covar,"{
     ""objective"": [
         ""obj_divers_rich"",
         ""obj_rel_abund"",
-        ""obj_behaviour""
+        ""obj_behaviour"",
+        ""obj_unknown""
     ]
 }",cam_strat_covar,"Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance). If so, how many covariates?
 (e.g., 5 different habitat types would be 5 covariates)","TRUE, FALSE","YES, NO"
@@ -14,7 +15,8 @@ cam_strat_covar,"{
     ""objective"": [
         ""obj_divers_rich"",
         ""obj_rel_abund"",
-        ""obj_behaviour""
+        ""obj_behaviour"",
+        ""obj_unknown""
     ]
 }",cam_strat_covar_num,"If so, how many covariates?
 (e.g., 5 different habitat types would be 5 covariates)",NA,NA
@@ -22,7 +24,8 @@ surv_dur_min_max,NULL,surv_dur_mth_min,"Is there a minimum number of months you 
 surv_dur_min_max,NULL,surv_dur_mth_max,"Is there a maximum number of months you can sample? If so, how many?","TRUE, FALSE, NA","YES, NO"
 sp_asymptote,"{
     ""objective"": [
-        ""obj_divers_rich""
+        ""obj_divers_rich"",
+        ""obj_unknown""
     ]
 }",sp_asymptote,Do you wish to sample long enough to reach the species-accumulation asymptote?,"yes, no, unkn","YES, NO, I'm not sure"
 obj_targ_sp,NULL,obj_targ_sp,Are you sampling for a single species or multiple?,"single, multiple","Single, Multiple"
@@ -31,7 +34,8 @@ sp_info,"{
         ""single""
     ],
     ""objective"": [
-        ""obj_inventory""
+        ""obj_inventory"",
+        ""obj_unknown""
     ]
 }",sp_info,How well is the biology about of the Target Species known?,"poor, well, unkn","Poorly known, Well known, I'm not sure"
 sp_type,"{
@@ -40,7 +44,8 @@ sp_type,"{
     ],
     ""objective"": [
         ""obj_rel_abund"", 
-        ""obj_density""
+        ""obj_density"",
+        ""obj_unknown""
     ]
 }",sp_type,Is the Target Species a carnivore or ungulate?,"carnivore, ungulate, other","Carnivore, Ungulate, Other"
 sp_occ_restr,"{
@@ -49,7 +54,8 @@ sp_occ_restr,"{
     ],
     ""objective"": [
         ""obj_inventory"",
-        ""obj_density""
+        ""obj_density"",
+        ""obj_unknown""
     ]
 }",sp_occ_restr,Is the distribution of the Target Species highly restricted?,"yes, no, unkn","YES, NO, I'm not sure"
 sp_hr_size,"{
@@ -58,10 +64,11 @@ sp_hr_size,"{
     ],
     ""objective"": [
         ""obj_occupancy"", 
-        ""obj_rel_abund"",
-        ""obj_abundance"",
+        ""obj_rel_abund"", 
         ""obj_density"", 
-        ""obj_behaviour""
+        ""obj_abundance"",
+        ""obj_behaviour"",
+        ""obj_unknown""
     ]
 }",hr_size,"If so, enter the home range diameter (in metres)",,
 sp_hr_size,"{
@@ -69,11 +76,12 @@ sp_hr_size,"{
         ""single""
     ],
     ""objective"": [
-        ""obj_occupancy"",
-        ""obj_rel_abund"",
+        ""obj_occupancy"", 
+        ""obj_rel_abund"", 
+        ""obj_density"", 
         ""obj_abundance"",
         ""obj_behaviour"",
-        ""obj_density""
+        ""obj_unknown""
     ]
 }",data_hr,"Is home range size information available for your Target Species (can be taken from the literature)? If so, enter the home range diameter (in metres)","integer, NA","YES, NO"
 sp_size,"{
@@ -81,7 +89,8 @@ sp_size,"{
         ""single""
     ],
     ""objective"": [
-        ""obj_divers_rich""
+        ""obj_divers_rich"",
+        ""obj_unknown""
     ]
 }",sp_size,What is the approximate size of the Target Species?,"sm, med, lg, multiple","Small, Medium, Large, Multiple"
 sp_rarity,"{
@@ -91,7 +100,8 @@ sp_rarity,"{
     ""objective"": [
         ""obj_occupancy"", 
         ""obj_rel_abund"", 
-        ""obj_density""
+        ""obj_density"",
+        ""obj_unknown""
     ],
     ""sp_type"": [
          ""ungulate""
@@ -104,11 +114,13 @@ sp_detprob_cat,"{
     ""objective"": [
         ""obj_occupancy"", 
         ""obj_inventory"", 
-        ""obj_density""
+        ""obj_density"",
+        ""obj_unknown""
     ]
 }",sp_detprob_cat,How detectable is the Target Species?,"low, med, high, unkn, multiple","Low, Medium, High, Unknown, Multiple"
 cam_independent,"{
     ""objective"": [
-        ""obj_inventory""
+        ""obj_inventory"",
+        ""obj_unknown""
     ]
 }",cam_independent,Will each camera location be treated as an independent sample?,"TRUE, FALSE","YES, NO"
