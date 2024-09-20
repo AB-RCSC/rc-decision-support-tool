@@ -1,0 +1,1100 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Remote Camera Decision Support Tool - Concept Library &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=fcd2f693" />
+    <link rel="stylesheet" type="text/css" href="_static/css/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="02_dialog-boxes/08_references.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives-resources">Objectives &amp; Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-area-site-selection-constraints">Study area &amp; Site selection constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-timing">Duration &amp; Timing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#target-species">Target species</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#target-species-single">Target species (single)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#target-species-multiple">Target species (multiple)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equipment-deployment">Equipment &amp; Deployment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">Data &amp; Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommendations">Recommendations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-approaches">Modelling Approaches</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <style>
+    .bd-page-width {
+    max-width: 85%;  /* default is 88rem */
+}
+    .bd-main .bd-content .bd-article-container {
+    max-width: 100%;  /* default is 60em */
+  }
+    h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    }
+}
+</style>
+<section class="tex2jax_ignore mathjax_ignore" id="remote-camera-decision-support-tool-concept-library">
+<span id="toc1-concept-lib"></span><h1>Remote Camera Decision Support Tool - Concept Library<a class="headerlink" href="#remote-camera-decision-support-tool-concept-library" title="Link to this heading">#</a></h1>
+<!-- 
+conda activate rclib
+cd C:\Users\cassi\Documents\GitHub_AB-RCSC\rc-tool_concept-library
+jupyter-book build ./
+-->
+<section id="objectives-resources">
+<span id="id1"></span><h2>Objectives &amp; Resources<a class="headerlink" href="#objectives-resources" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orangelight.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>User entry (Study design or data already collected)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_01_user_entry.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_01_user_entry.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orangelight.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>State Variable <em>vs.</em> Objective</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_02_objective.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_02_objective.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orangelight.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Number of cameras available</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_03_num_cams.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_03_num_cams.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="study-area-site-selection-constraints">
+<span id="id2"></span><h2>Study area &amp; Site selection constraints<a class="headerlink" href="#study-area-site-selection-constraints" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orange.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Single <em>vs</em> multiple</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_04_study_area_mult.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_04_study_area_mult.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orange.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Known density gradient</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_05_cam_dens_gradient.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_05_cam_dens_gradient.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orange.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Stratified by covariates</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_06_cam_strat_covar.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_06_cam_strat_covar.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orange.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Camera density</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_07_cam_high_dens.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_07_cam_high_dens.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="duration-timing">
+<span id="id3"></span><h2>Duration &amp; Timing<a class="headerlink" href="#duration-timing" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orange.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Duration (minimum &amp; maximum)</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_08_surv_dur_min_max.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_08_surv_dur_min_max.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orange.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Species-accumulation curves</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_10_sp_asymptote.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_10_sp_asymptote.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_orange.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Season(s)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_11_study_season_num.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_11_study_season_num.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="target-species">
+<span id="id4"></span><h2>Target species<a class="headerlink" href="#target-species" title="Link to this heading">#</a></h2>
+<section id="target-species-single">
+<span id="id5"></span><h3>Target species (single)<a class="headerlink" href="#target-species-single" title="Link to this heading">#</a></h3>
+<br>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Single <em>vs.</em> multiple</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_12_obj_targ_sp.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_12_obj_targ_sp.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Ecology of species (well known <em>vs.</em> poorly known)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_13_sp_info.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_13_sp_info.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Carnivore / ungulate</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_14_sp_type.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_14_sp_type.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Low density species</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_15_sp_dens_low.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_15_sp_dens_low.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Occurrence restricted</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_16_sp_occ_restr.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_16_sp_occ_restr.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Home range size</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_17_sp_hr_size.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_17_sp_hr_size.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Body size</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_18_sp_size.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_18_sp_size.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Rarity</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_19_sp_rarity.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_19_sp_rarity.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Detection probability</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_20_sp_detprob_cat.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_20_sp_detprob_cat.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Behaviour (Investigative)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_21_sp_behav.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_21_sp_behav.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Behaviour (Seasonal)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_22_sp_behav_season.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_22_sp_behav_season.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Markings (Marked, unmarked, partially marked)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_23_marking_code.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_23_marking_code.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Markings (All or subset marked)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_24_marking_allsub.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_24_marking_allsub.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Markings (Number of categorical identifiers)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_25_3ormore_cat_ids.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_25_3ormore_cat_ids.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Additional information obtainable</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_26_auxillary_info.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_26_auxillary_info.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Counts of individuals</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_27_aux_count_possible.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_27_aux_count_possible.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Focal area measured or detections binned by distance</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_28_focalarea_calc.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_28_focalarea_calc.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Camera density</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_29_cam_high_dens.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_29_cam_high_dens.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Study population size</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_30_sp_common_pop_lg.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_30_sp_common_pop_lg.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="target-species-multiple">
+<span id="id6"></span><h3>Target species (multiple)<a class="headerlink" href="#target-species-multiple" title="Link to this heading">#</a></h3>
+<br>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Size</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_31_sp_size_multi.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_31_sp_size_multi.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Behaviour</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_32_sp_behav__multi.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_32_sp_behav__multi.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Rarity</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_33_sp_rarity_multi.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_33_sp_rarity_multi.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_purple.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Detection probability</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_36_sp_detprob_cat_multi.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_36_sp_detprob_cat_multi.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="equipment-deployment">
+<span id="id7"></span><h2>Equipment &amp; Deployment<a class="headerlink" href="#equipment-deployment" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_yellow2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Camera make &amp; model</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_39_cam_makemod_same.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_39_cam_makemod_same.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_yellow2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Camera settings</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_40_cam_settings_mult.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_40_cam_settings_mult.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_yellow2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Camera height, angle, direction</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_41_cam_protocol_ht_angle_dir.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_41_cam_protocol_ht_angle_dir.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_yellow2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Bait/lure</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_43_bait_lure.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_43_bait_lure.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_yellow2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Targetting specific features</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_45_targ_feature.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_45_targ_feature.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="data-analysis">
+<span id="id8"></span><h2>Data &amp; Analysis<a class="headerlink" href="#data-analysis" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_blue2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Camera location independence</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_47_cam_independent.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_47_cam_independent.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_blue2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Repeat sampling</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_48_multisamp_per_loc.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_48_multisamp_per_loc.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_blue2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Mixed models</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_49_modmixed.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_49_modmixed.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_blue2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Number of detections</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_50_num_det.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_50_num_det.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_blue2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Number of individuals</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_02_mod_divers_rich.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_02_mod_divers_rich.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_blue2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Number of recaptures</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_52_num_recap.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_52_num_recap.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_blue2.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Overdispersion</font></font></em> / <em><font color='grey'><font size='4'>Zero-inflation</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_51_num_det_individ.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_51_num_det_individ.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="recommendations">
+<span id="id9"></span><h2>Recommendations<a class="headerlink" href="#recommendations" title="Link to this heading">#</a></h2>
+<section id="modelling-approaches">
+<span id="id10"></span><h3>Modelling Approaches<a class="headerlink" href="#modelling-approaches" title="Link to this heading">#</a></h3>
+<br>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Species inventory</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_01_mod_inventory.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_01_mod_inventory.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Species diversity &amp; richness</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_02_mod_divers_rich.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_02_mod_divers_rich.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>Occupancy</font></font></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_03_mod_occupancy.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_03_mod_occupancy.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Relative abundance indices</font></font></em>*</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_04_mod_rai.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_04_mod_rai.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Capture-recapture (CR) / Capture-mark-recapture (CMR)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_cr_cmr.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_cr_cmr.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_12_mod_scr_secr.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_12_mod_scr_secr.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Spatial mark-resight </font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_13_mod_smr.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_13_mod_smr.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Spatial count (SC) model / Unmarked spatial capture-recapture</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_14_mod_sc.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_14_mod_sc.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Spatial Partial Identity Model (Categorical SPIM; catSPIM)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_15_mod_catspim.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_15_mod_catspim.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Spatial Partial Identity Model (2-flank SPIM)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_16_mod_2flankspim.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_16_mod_2flankspim.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Random encounter model (REM)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_17_mod_rem.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_17_mod_rem.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Random encounter and staying time (REST)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_18_mod_rest.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_18_mod_rest.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Time in front of the camera (TIFC)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_19_mod_tifc.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_19_mod_tifc.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Distance sampling (DS)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_20_mod_ds.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_20_mod_ds.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Time-to-event (TTE)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_21_mod_tte.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_21_mod_tte.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Space-to-event (STE)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_22_mod_ste.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_22_mod_ste.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Instantaneous sampling (IS)</font></font></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_23_mod_is.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_23_mod_is.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_green.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><font color='grey'><font size='4'>Behaviour</font></font></em>*</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_24_mod_behaviour.html"><span>https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_24_mod_behaviour.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

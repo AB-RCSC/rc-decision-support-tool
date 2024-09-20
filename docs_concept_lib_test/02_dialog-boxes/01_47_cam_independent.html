@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Camera location independence &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=fcd2f693" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/01_47_cam_independent';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Camera...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="camera-location-independence">
+<span id="i-cam-independent"></span><h1>Camera location independence<a class="headerlink" href="#camera-location-independence" title="Link to this heading">#</a></h1>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Overview</label><div class="sd-tab-content docutils">
+<p>To determine whether your <a class="reference internal" href="09_glossary.html#term-Camera-location"><span class="xref std std-term">camera locations</span></a> should be treated as independent samples or not, consider the following questions. First, are cameras “sharing” the same animals? If there are multiple cameras within an animal’s home range, the answer is likely “yes” and camera locations are not independent samples. Second, from a statistical perspective, are camera locations close enough together in space that there’s a good likelihood that detection at one camera affects detection at another camera? Or if the same camera locations are sampled repeatedly, is the time frame between surveys so short that detection in one time frame affects the subsequent one? If the answers to one of these questions is “yes”, camera locations should also be treated as dependent samples. The answer to these questions will depend on the biology of the Target Species (e.g., how far they move, and their grouping tendency, territoriality etc.), the survey interval and sampling design. For example, Zuckerberg et al. (2020) illustrate how stratified and systematic non-random designs may lead to biases caused by non-independence of camera locations in some cases (Figures 1 and 3). They also show the implications of independent locations on the number of camera locations.</p>
+<p>Whether camera locations are truly independent or not is important for several reasons. When locations are treated as independent samples, but are in actuality not, they can lead to biased and erroneous results, with potentially serious implications for species management and conservation. Common biases include narrower confidence limits than “truth” (leading to a false sense of certainty of about the results), and underestimated species richness or other metrics. It is also important to know if camera locations are truly independent if you’re interested in estimating occupancy. Knowing this information helps determine whether you’re estimating “probability of occupancy” (such as when camera locations are dependent) or “probability of use” (when locations are independent – e.g. cameras cover only a portion of an individual’s home range; Wearn &amp; Glover-Kapfer, 2017).</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Advanced</label><div class="sd-tab-content docutils">
+<p>Spatial autocorrelation (i.e., the tendency for sites that are close together to be more similar) may occur when multiple cameras are placed nearby (such as in clustered, paired or array sampling). Spatial autocorrelation is a form of pseudoreplication (Hurlbert, 1984; when observations are not statistically independent but are treated as if they are) and can be problematic because it can artificially inflate or diminish ecological effects. The degree to which this is a problem will depend on the Target Species (i.e., how far they can travel may dictate the distance at which another camera is too near) and the modelling approach. In these cases, users should consider an analytical framework that accommodates autocorrelation to avoid issues of spatial pseudoreplication (Hurlbert, 1984) and false conclusions (Ramage et al., 2013) (e.g., using random effects; Wearn &amp; Glover-Kapfer, 2017] or spatial autoregressive models; Kelejian &amp; Prucha, 1998).</p>
+<p>Note that pseudoreplication (Hurlbert, 1984) can also occur over time (e.g., if camera locations are sampled repeatedly to obtain detection rates as repeated counts, or if the inter-detection interval is too short for a subsequent detection to be truly independent of the first detection).</p>
+<p>In some cases, it is advantageous or required to have dependent detections from multiple cameras. For example, spatially explicit capture-recapture require observations of individual animals at multiple cameras to determine activity centres for density estimation. Furthermore, a clustered or paired study design is often useful when estimating density from individually identifiable species (but see McClintock et al. [2015] and Augustine et al. [2016] for single camera approaches) or needing to increase detection probability of rare species when single independent cameras are insufficient (e.g., O’Connor et al., 2017). In the latter case, increasing survey effort (e.g., survey duration, more cameras) may achieve the same goal without leading to issues on non-independent samples highlighted above.</p>
+<p><strong>Spatial autocorrelation</strong>: The tendency for locations that are closer together to be more similar.</p>
+<p><strong>Pseudoreplication</strong>: When observations are not statistically independent (spatially or temporally) but are treated as if they are independent.</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Visual resources</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Zuckerberg et al., 2020</div>
+<figure class="align-default">
+<img alt="../_images/zuckerberg_et_al_2020_fig1_clipped.png" class="img-grid" src="../_images/zuckerberg_et_al_2020_fig1_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>Zuckerberg et al. (2020) - Fig. 1</strong> Four experimental designs sampling species occupancy on a theoretical landscape.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>a</strong> A simple random sampling scheme demonstrating classical pseudoreplication by failing to adequately sample an important environmental predictor (elevation) operating across the study area. . <strong>b</strong> A systematic sampling design with strong replication and landscape coverage, but with significant overlapping of landscape buffers. <strong>c</strong>  A systematic design that attempts to avoid overlap by reducing buffering extent. <strong>d</strong> A systematic design that attempts to avoid overlap by sacrificing sample size.</p>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Zuckerberg et al., 2020</div>
+<figure class="align-default">
+<img alt="../_images/zuckerberg_et_al_2020_fig3_clipped.png" class="img-grid" src="../_images/zuckerberg_et_al_2020_fig3_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>Zuckerberg et al. (2020) - Fig. 3</strong> Four different sampling scenarios superimposed on maps of probability of occurrence aggregated to different scales of resolution to match the corresponding landscape buffer.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Scenario A implemented a biased sampling scheme with 18 sampling sites stratified by only habitat and ignored the environmental gradient. Scenario B used a regular sampling approach with overlapping landscape buffers. Scenario C used the same sampling sites as scenario B, but with a finer resolution (8-grid cell) to ensure non-overlapping buffers. Scenario D used the same buffer radius as scenarios A and B, but with fewer sampling sites to remove overlapping buffers. Overlapping landscapes were allowed to extend beyond the study region in order to avoid spatial bias towards the center of the landscapes (e.g., mid-domain effect)</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+References</label><div class="sd-tab-content docutils">
+<p>Augustine, B. C., Royle, J. A., Kelly, M. J., Satter, C. B., Alonso, R. S., Boydston, E. E., &amp; Crooks, K. R. (2016). Spatial capture-recapture with partial identity: An application to camera traps. <em>bioRxiv.</em> <a class="reference external" href="http://dx.doi.org/10.1101/056804">http://dx.doi.org/10.1101/056804</a></p>
+<p>Obbard, M. E., Howe, E. J., &amp; Kyle, C. J. (2010). Empirical Comparison of Density Estimators for Large Carnivores. <em>Journal of Applied Ecology</em>, 47(1), 76–84. <a class="reference external" href="https://doi.org/10.1111/j.1365-2664.2009.01758.x">https://doi.org/10.1111/j.1365-2664.2009.01758.x</a></p>
+<p>Hurlbert, S. (1984). Pseudoreplication and the design of ecological field experiments. <em>Ecological Monographs, 54</em>(2), 187–211. <a class="reference external" href="https://doi.org/10.2307/1942661">https://doi.org/10.2307/1942661</a></p>
+<p>Kelejian, H. H., &amp; Prucha, I. R., (1998). A generalized spatial two-stage least squares procedure for estimating a spatial autoregressive model with autoregressive disturbances. The Journal of Real Estate Finance and Economics,17:99-121. <a class="reference external" href="https://doi.org/10.1023/A:1007707430416">https://doi.org/10.1023/A:1007707430416</a></p>
+<p>McClintock, B. T. (2015). multimark: An R package for analysis of capture–recapture data consisting of multiple ‘noninvasive’ marks. <em>Ecology and Evolution, 5</em>(21), 4920–4931. <a class="reference external" href="https://doi.org/10.1002/ece3.1676">https://doi.org/10.1002/ece3.1676</a></p>
+<p>Ramage, B. S., Sheil, D., Salim, H. M. W., Fletcher, C., Mustafa, N. -Z. A., Luruthusamay, J. C., Harrison, R. D., Butod, E., Dzulkiply, A. D., Kassim, A. R., &amp; Potts, M. D. (2013). Pseudoreplication in tropical forests and the resulting effects on biodiversity conservation. <em>Conservation Biology, 27</em>(2), 364–372. <a class="reference external" href="https://www.jstor.org/stable/23525262">https://www.jstor.org/stable/23525262</a></p>
+<p>Wearn, O. R., &amp; Glover-Kapfer, P. (2017). Camera-Trapping for Conservation: A Guide to Best-ractices. <em>WWF conservation technology series, 1</em>, 1–181. <a class="reference external" href="http://dx.doi.org/10.13140/RG.2.2.23409.17767">http://dx.doi.org/10.13140/RG.2.2.23409.17767</a></p>
+<p>Zuckerberg, B., Cohen, J. M., Nunes, L. A., Bernath-Plaisted, J., Clare, J. D. J., Gilbert, N. A., Kozidis, S. S., Maresh Nelson, S. B., Shipley, A. A., Thompson, K. L., &amp; Desrochers, A. (2020). A Review of Overlapping Landscapes: Pseudoreplication or a Red Herring in Landscape Ecology? <em>Current Landscape Ecology Reports, 5</em>(4), 140–148. <a class="reference external" href="https://doi.org/10.1007/s40823-020-00059-4">https://doi.org/10.1007/s40823-020-00059-4</a></p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_dialog-boxes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
