@@ -297,7 +297,7 @@ All questions in the tool have been created to be able to support populating rec
 ::::::
 
 :::::{note} 
-Don't forget to check out {bdg-link-primary-line}`development<dev>` (below) before you leave; we've got exciting {bdg-link-primary-line}`Shiny apps/Widgets in development<dev>`.
+Don't forget to check out {bdg-link-primary-line}`development<#dev>` (below) before you leave; we've got exciting {bdg-link-primary-line}`Shiny apps/Widgets in development<#dev>`.
 :::::
 :::::::
 :::::::{card}
