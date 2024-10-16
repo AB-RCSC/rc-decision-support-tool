@@ -13,9 +13,9 @@
   "sp_info": "well",
   "sp_type": "carnivore",
   "sp_occ_restr": "unkn",
-  "data_hr": "NA",
   "sp_size": "med",
   "sp_rarity": "common",
   "sp_detprob_cat": "high",
-  "cam_independent": "FALSE"
+  "cam_independent": "FALSE",
+  "data_hr": "NA"
 }
