@@ -1,5 +1,5 @@
 {
-  "objective": "obj_unknown",
+  "objective": "obj_behaviour",
   "num_cams_limited": "FALSE",
   "num_cams_avail": 999999,
   "surv_dur_mth_min": "FALSE",
