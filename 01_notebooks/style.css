@@ -27,11 +27,13 @@
 
 .custom-header {
     white-space: normal;
-    font-size: 18px !important;
-    font-weight: bold !important;
-    padding: 50px;
+    font-size: 14px !important;
+    font-weight: bold;
     color: #000000;
-    align-items: flex-start !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .custom-footer {
