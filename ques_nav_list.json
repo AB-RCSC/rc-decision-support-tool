@@ -1,1 +1,8 @@
-{"obj_list": [["Select a notebook", null], ["objective", "http://rc-decision-support-tool.ca/voila/render/objective.ipynb"]], "st_area_list": [["Select a notebook", null]], "dt_list": [["Select a notebook", null]], "ts_list": [["Select a notebook", null], ["sp_hr_size", "http://rc-decision-support-tool.ca/voila/render/sp_hr_size.ipynb"]], "ed_list": [["Select a notebook", null]], "da_list": [["Select a notebook", null]]}
+{
+  "obj_list": [["Select a notebook", null]],
+  "st_area_list": [["Select a notebook", null]],
+  "dt_list": [["Select a notebook", null]],
+  "ts_list": [["Select a notebook", null]],
+  "ed_list": [["Select a notebook", null]],
+  "da_list": [["Select a notebook", null]]
+}
