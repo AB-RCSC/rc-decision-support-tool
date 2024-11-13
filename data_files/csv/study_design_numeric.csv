@@ -31,9 +31,9 @@
         ""med"",
         ""lg""
     ]
-}","Random,Stratified,Stratified random,Clustered","*,>=1,>=1&<=2","30,>=50,>=25&<=35",>=30,">=600&<=1500,>=1000",<6
+}","Random,Stratified,Stratified random,Clustered","Spatially independent,>=1,>=1&<=2","30,>=50,>=25&<=35",>=30,">=600&<=1500,>=1000",<6
 19,mod_divers_rich,Species diversity & richness,num_cams_avail,,,,>20,,,
-22,mod_divers_rich,Species diversity & richness,cam_arrange,,,,>=(num_covars*20)&<=(num_covars*50),,,
+22,mod_divers_rich,Species diversity & richness,cam_arrange,,,,>=(cam_strat_covar_num*20)&<=(cam_strat_covar_num*50),,,
 23,mod_divers_rich,Species diversity & richness,sp_asymptote,,,,>=20&<=100,,,
 29,mod_divers_rich,Species diversity & richness,sp_size,,,,,,,>=3&<=6
 30,mod_occupancy,Occupancy,invalid,"{
@@ -55,8 +55,8 @@
     ""sp_detprob_cat"": [
         ""low""
     ]
-}","Random,Targeted,Clustered,Stratified random",,">=100,>60",,"*,>1200,>1000","*,<6"
-34,mod_occupancy,Occupancy,data_hr_true,,,>(sp_hr_size),,,,
+}","Random,Targeted,Clustered,Stratified random",,">=100,>60",,"Species-dependent,>1200,>1000","Species-dependent,<6"
+34,mod_occupancy,Occupancy,data_hr_true,,,>(hr_size),,,,
 35,mod_occupancy,Occupancy,data_hr_false,,,>=1,,,,
 36,mod_occupancy,Occupancy,num_cams_avail,,,,40,,,
 39,mod_occupancy,Occupancy,sp_rarity_common,,,,"<20,<=30",,,
@@ -87,7 +87,7 @@
     ""sp_rarity"": [
         ""rare"", ""very rare"", ""common""
     ]
-}","Random,Systematic random",">0,>=1,>=1&<=2","*,>=50,>=(num_covars*20)&<=(num_covars*50)",">0,>=30,>0",>2000,"<999,<12"
+}","Random,Systematic random",">0,>=1,>=1&<=2","As many as possible,>=50,>=(cam_strat_covar_num*20)&<=(cam_strat_covar_num*50)",">0,>=30,>0",>2000,"<999,<12"
 57,mod_rai,Relative abundance indices,num_cams_avail,,,,>20,,,
 64,mod_rai,Relative abundance indices,user_entry_num_det10,,,,,,Enough for > 10 detections,
 65,mod_rai,Relative abundance indices,user_entry_num_det20,,,,,,Ideally > 20 detections,
@@ -99,8 +99,8 @@
         ""Behaviour""
     ],
     ""data_hr"": [
-        ""TRUE"",
-        ""FALSE""
+        ""integer"",
+        ""NA""
     ],
     ""cam_arrange"": [
         ""Stratified"",
@@ -111,6 +111,6 @@
         0
     ]
 }","Random,Stratified,Targeted",Objective-dependent,NULL,NULL,NULL,Dependent on behavioural metric (e.g. if it occurs during a certain period)
-309,mod_behaviour,Behaviour,data_hr_true,,,>(sp_hr_size),,,,
+309,mod_behaviour,Behaviour,data_hr_true,,,>(hr_size),,,,
 310,mod_behaviour,Behaviour,data_hr_false,,,>=1,,,,
-312,mod_behaviour,Behaviour,cam_arrange_ cam_strat_covar_num,,,,>=(num_covars*20),,,
+312,mod_behaviour,Behaviour,cam_arrange_ cam_strat_covar_num,,,,>=(cam_strat_covar_num*20),,,
