@@ -87,7 +87,7 @@
     ""sp_rarity"": [
         ""rare"", ""very rare"", ""common""
     ]
-}","Random,Systematic random",">0,>=1,>=1&<=2","As many as possible,>=50,>=(cam_strat_covar_num*20)&<=(cam_strat_covar_num*50)",">0,>=30,>0",>2000,"<999,<12"
+}","Random,Systematic random",">0,>=1,>=1&<=2","As many as possible, >=50,>=(cam_strat_covar_num*20)&<=(cam_strat_covar_num*50)",">0,>=30,>0",>2000,"<999,<12"
 57,mod_rai,Relative abundance indices,num_cams_avail,,,,>20,,,
 64,mod_rai,Relative abundance indices,user_entry_num_det10,,,,,,Enough for > 10 detections,
 65,mod_rai,Relative abundance indices,user_entry_num_det20,,,,,,Ideally > 20 detections,
