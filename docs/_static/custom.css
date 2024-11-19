@@ -1,0 +1,109 @@
+/* https://pydata-sphinx-theme.readthedocs.io/en/v0.9.0/user_guide/customizing.html */
+/* anything related to the light theme */
+html[data-theme="light"] {
+    background: grey;
+  --pst-color-primary: rgb(69 157 185);
+}
+
+.sb-site-main {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of main content and sidebar */
+}
+
+/* Adjust the width of the left sidebar */
+.sb-site-main .sphinxsidebar {
+    order: -1; /* This ensures the sidebar comes first */
+}
+
+.bd-main .bd-content .bd-article-container {
+    max-width: 95%;  /* default is 60em */
+  }
+.bd-page-width {
+    max-width: 93%;  /* default is 88rem */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2F5496;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-style: italic;
+    color: #2F5496;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+body {
+    line-height: 1.4;
+    background: whitesmoke;
+}
+
+/* line-height: 1.4;*/
+/*    background: #e8e9e5b;*/
+/*    background: #e5e5e5;*/
+/*    background: #cfcfcf;*/
+/* custom.css */
+/*.custom-icon {*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+ /*   margin-right: 10px;  /* Space between icon and text */
+/*}*/
+
+.grid-background-grey {
+    background-color: #f0f8ff;
+    /* padding: 20px;  Optional: Add padding to grid items */
+    /* border-radius: 8px;  Optional: Round the corners */
+}
+
+.grid-background-white {
+    background-color: white;
+    /* padding: 20px;  Optional: Add padding to grid items */
+    /* border-radius: 8px;  Optional: Round the corners */
+}
+
+
+table {
+    font-size: 14px;
+    line-height: 1.2;
+    border-collapse: collapse; /* Remove spacing between table borders */
+    width: 100%; /* Make table take full width */
+}
+
+/* Set proportional column widths */
+table colgroup col:nth-child(1) {
+    width: 30%;  /* First column takes 30% of the table width */
+}
+
+table colgroup col:nth-child(2) {
+    width: 45%;  /* Second column takes 50% of the table width */
+}
+
+table colgroup col:nth-child(3) {
+    width: 20%;  /* Third column takes 20% of the table width */
+}
+
+.proportional-table2cols {
+    width: 100%;
+    font-size: 14px;
+}
+
+.proportional-table2cols colgroup col:nth-child(1) {
+    width: 30%;
+}
+
+.proportional-table2cols colgroup col:nth-child(2) {
+    width: 70%;
+}

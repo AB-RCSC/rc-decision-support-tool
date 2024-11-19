@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to the Remote Camera Decision Support Tool! &#8212; Remote Camera Decision Support Tool</title>
+    <title>&lt;no title&gt; &#8212; Remote Camera Decision Support Tool</title>
   
   
   
@@ -16,29 +16,33 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=624c30a4" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -61,6 +65,7 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -76,19 +81,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -96,7 +90,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -104,8 +97,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -119,7 +112,7 @@
   </button>
   
   
-  <div class="col-lg-3 navbar-header-items__start">
+  <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
 
@@ -139,14 +132,14 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Remote Camera Decision Support Tool - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Remote Camera Decision Support Tool - Home"/>
   
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -154,6 +147,33 @@
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -165,17 +185,48 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
 
@@ -193,15 +244,11 @@
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -218,7 +265,8 @@
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -233,6 +281,33 @@
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
   </ul>
 </nav></div>
           
@@ -242,6 +317,41 @@
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
 
@@ -279,67 +389,47 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <style>
-.bd-main .bd-content .bd-article-container {
-    max-width: 85%;  /* default is 60em */
-  }
-.bd-page-width {
-    max-width: 85%;  /* default is 88rem */
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2F5496
-}
-h3 {
-    font-size: 1.5rem;
-    font-weight: normal;
-    font-style: italic;
-    color: #2F5496
-}
-</style>
-<section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-remote-camera-decision-support-tool">
-<span id="home"></span><h1>Welcome to the Remote Camera Decision Support Tool!<a class="headerlink" href="#welcome-to-the-remote-camera-decision-support-tool" title="Link to this heading">#</a></h1>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+  <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
-<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
-<p><font size="4.5"><br>A free, online, interactive, visual study decision support system for remote camera projects</font></p>
-<p><strong>Last updated</strong>: 2024-09-26</p>
-<p><strong>Version</strong>: v0.1 (Demo)</p>
-<p>© Alberta Remote Camera Steering Committee</p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-col sd-d-flex-column sd-col-8 sd-col-xs-8 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
+<h1 class="rubric" id="welcome-to-the-remote-camera-decision-support-tool"><span id="home"></span>Welcome to the Remote Camera Decision Support Tool!</h1>
 <br>
+</br>
+<font size="4.5">A free, online, interactive, visual study decision support system for remote camera projects</font>
+<font size="4.5"><span style="color:whitesmoke">.</font></span>
+<font size="4.5"><span style="color:whitesmoke">.</font></span>
+<p><strong>Last updated</strong>: 2024-11-17</p>
+<p><strong>Version</strong>: v0.1 (Demo)</p>
+<p>© Alberta Remote Camera Steering Committee<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<em><font size="2">The Alberta Remote Camera Steering Committee (RCSC) respectfully acknowledges that we are located on the traditional lands of Treaties 4, 6, 7, 8, and 10. This territory has been traditional and ancestral land of the Cree, Dene, Blackfoot, Ojibway/Saulteaux, Nakota Sioux, Métis, and many others whose histories, languages, and cultures continue to influence our vibrant community.</font></em></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
 <figure class="align-left">
-<a class="reference internal image-reference" href="_images/logo.png"><img alt="_images/logo.png" src="_images/logo.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/logo.png"><img alt="_images/logo.png" src="_images/logo.png" style="width: 85%;" /></a>
 </figure>
 <p class="sd-text-center"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="http://www.rc-decision-support-tool.ca/voila/render/objective.ipynb?"><span>Launch the tool</span></a></p>
- <!--#00827b-->
 <p class="sd-text-center"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library"><span>Concept library</span></a></p>
 </div>
 </div>
 </div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm grid-background-white docutils">
+<div class="sd-card-body docutils">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Background &amp; Objectives</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong><font size="4"><span style="color:#2F5496">Background</font></span></strong></p>
-<p class="sd-card-text">In 2020, the Alberta Remote Camera Steering Committee (RCSC) merged with the B.C. Wildlife Camera Committee to form WildCAM (Wildlife Cameras for Adaptive Management; <a class="reference external" href="https://wildcams.ca/">https://wildcams.ca/</a>) to form a remote camera network for Western Canada. This collaboration aims to address a need for tools, standards, and opportunities for sharing knowledge among remote camera users across Western Canada.</p>
-<p class="sd-card-text">For the past year, the RCSC has developed two companion documents, the <a class="reference external" href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/2_metadata-standards/2_0.1_Citation-and-Info.html">Remote Camera Metadata Standards for Alberta</a> (RCSC, 2023) and <a class="reference external" href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_0.1_Citation-and-Info.html">Remote Camera Survey Guidelines</a> (RCSC et al., 2023), which relate to several supporting documents and tools, including standardized <a class="reference external" href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_10.2_AppendixA-Field-Datasheets.html">deployment and service/retrieval fieldsheets</a>, an “<a class="reference external" href="https://five.epicollect.net/project/rcsc-and-wildcam-remote-camera-survey-guidelines">EpiCollect Template</a>” (ESRI Survey123 pending), and FWMIS loadforms (<a class="reference external" href="https://www.alberta.ca/wildlife-loadforms.aspx">https://www.alberta.ca/wildlife-loadforms.aspx</a>; available soon).</p>
-<p class="sd-card-text">These standards and guidelines provide guidance on the types of data that should be collected and how it should be documented when using remote cameras to detect wildlife, and offer recommendations on appropriate survey design, deployment methods and data management. The RCSC aims to ensure that the resources they develop are getting into the hands of remote camera users and are inclusive of their needs, level of expertise, and feedback. Yet, as the development of such standards and tools was realized, the RCSC identified multiple factors that inhibit the ability of such standards and tools to have an impact on the ground via awareness, understanding, and buy-in from the community. The RCSC identified the need for:</p>
+<p class="sd-card-text">In 2020, the Alberta Remote Camera Steering Committee (RCSC) merged with the B.C. Wildlife Camera Committee to form WildCAM (Wildlife Cameras for Adaptive Management; <a href="https://wildcams.ca/" target="_blank">https://wildcams.ca</a>) forming remote camera network for Western Canada. This collaboration addresses a need for tools, standards, and knowledge-sharing among remote camera users in the region.</p>
+<p class="sd-card-text">In 2023/2024, the RCSC developed two companion documents, the <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/2_metadata-standards/2_0.1_Citation-and-Info.html" target="_blank">Remote Camera Metadata Standards for Alberta (RCSC, 2024)</a> and <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_0.1_Citation-and-Info.html" target="_blank">Remote Camera Survey Guidelines (RCSC et al., 2024)</a>. There are supported several resources, including standardized <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_10.2_AppendixA-Field-Datasheets.html" target="_blank">deployment and service/retrieval fieldsheets</a>, an “<a href="https://five.epicollect.net/project/rcsc-and-wildcam-remote-camera-survey-guidelines" target="_blank">EpiCollect Template</a>” (ESRI Survey123 pending), and FWMIS loadforms (<a href="https://www.alberta.ca/wildlife-loadforms.aspx" target="_blank">https://www.alberta.ca/wildlife-loadforms.aspx</a>; coming soon). These resources guide users on data collection, documentation, survey design, deployment methods, and data management for those monitoring wildlife with remote cameras.</p>
+<p class="sd-card-text">The RCSC aims to ensure that the resources they develop are getting into the hands of remote camera users and are inclusive of their needs, level of expertise, and feedback. Yet, as the development of such standards and tools was realized, the RCSC identified multiple factors that inhibit the ability of such standards and tools to have an impact on the ground via awareness, understanding, and buy-in from the community. The RCSC identified the need for novel approaches to:</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>novel approaches to engage remote camera users to ensure</strong> resources are available and accessible, and representative of the needs of diverse remote camera users throughout Western Canada, and</p></li>
-<li><p class="sd-card-text"><strong>novel approaches to disseminate information to remote camera users</strong> since there are many groups of remote camera users in Western Canada with diverse objectives and varying levels of expertise, access to information (e.g., publications), and constraints in the delivery of remote camera programs (e.g., digital data and broadband issues, scientific literacy, etc.), as well as differing scales of study or capacity.</p></li>
+<li><p class="sd-card-text"><strong>engage remote camera users</strong> to ensure resources are available and accessible, and representative of the needs of diverse remote camera users throughout Western Canada, and</p></li>
+<li><p class="sd-card-text"><strong>disseminate information to remote camera users</strong> to address barriers such as varying expertise, access to information, constraints in program delivery (e.g., digital/broadband issues, scientific literacy, etc.), as well as differing scales of study and/or capacity.</p></li>
 </ul>
-<p class="sd-card-text"><strong><font size="4"><span style="color:#2F5496">Objective</font></span></strong></p>
-<p class="sd-card-text">This project aims to mobilize the knowledge outlined in the <a class="reference external" href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/2_metadata-standards/2_0.1_Citation-and-Info.html">Remote Camera Metadata Standards for Alberta</a> (RCSC, 2023) and <a class="reference external" href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_0.1_Citation-and-Info.html">Remote Camera Survey Guidelines</a> (RCSC et al., 2023) to create a freely available, interactive, accessible online tool (i.e., the “<strong>Remote Camera Decision Support Tool</strong>”). This tool will guide users through choices encountered when designing a remote camera study, suggest design choices, and provide related resources.</p>
-<p class="sd-card-text">Users will be guided through a series of decision points related to their study. At each step, users will be able to access information related to the question itself, the impacts of the various choices on study design, or important related topics via “pop-up” boxes; information tabs include multiple tabs for information in different levels of complexity (new vs. advanced user) and formats (e.g., descriptions, figures, videos, Shiny apps, etc.).</p>
-<p class="sd-card-text">Study design recommendations will be generated from as a standardized report that will include: a) appropriate modelling approach(es) (e.g., density – spatially explicit capture-recapture), a b) study design recommendations (e.g., camera spacing, number of cameras, etc.), and c) analysis considerations (e.g., variables to consider in your analysis to reduce bias).</p>
+<p class="sd-card-text"><strong><font size="4.5"><span style="color:#2F5496">Objectives</font></span></strong>: This project aims to mobilize the knowledge outlined in the <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/2_metadata-standards/2_0.1_Citation-and-Info.html" target="_blank">Remote Camera Metadata Standards for Alberta (RCSC, 2024)</a> and <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_0.1_Citation-and-Info.html" target="_blank">Remote Camera Survey Guidelines (RCSC et al., 2024)</a> to create a freely available, interactive, accessible online tool (i.e., the “<strong>Remote Camera Decision Support Tool</strong>”). This tool will guide users through choices encountered when designing a remote camera study, suggest design choices, and provide related resources.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Sparknotes rationale</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -364,65 +454,71 @@ h3 {
 </div>
 </div>
 </details></div>
-</details><div class="docutils">
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<p class="sd-card-text"><strong><font size="4.5"><span style="color:#2F5496">📷 How does it work!?</font></span></strong></p>
-<p class="sd-card-text">This tool aims to support your decision-making process when designing a remote camera program by guiding you through a series of decision points related to your study in the form of an interactive flow chart.</p>
-<p class="sd-card-text">Once you have answered all of the questions, <strong>study design recommendations will be generated from your selections</strong>, which will include the following:</p>
+</details><h2 class="rubric" id="how-does-it-work">📷 How does it work!?</h2>
+<p class="sd-card-text">This tool aims to support your decision-making process when designing a remote camera program by guiding you through a series of decision points related to your study in the form of an interactive flow chart. At each step, users will be able to access information related to the question itself, the impacts of the various choices on study design, or important related topics via “pop-up” boxes; information tabs include multiple tabs for information in different levels of complexity (new vs. advanced user) and formats (e.g., descriptions, figures, videos, Shiny apps, etc.).</p>
+<p class="sd-card-text">Once you have answered all of the questions, study design <strong>recommendations will be generated from your selections as a standardized report</strong>, which will include:
+a) appropriate modelling approach(es) (e.g., density – spatially explicit capture-recapture),
+b) study design recommendations (e.g., camera spacing, number of cameras, etc.), and
+c) analysis considerations (e.g., variables to consider in your analysis to reduce bias).</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Recommendations</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
-<div class="sd-col sd-d-flex-column docutils">
+<span class="sd-summary-text">Click on this drop-down for more details</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-column sd-col-5 sd-col-xs-5 sd-col-sm-5 sd-col-md-5 sd-col-lg-5 docutils">
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Appropriate modelling approach(es)</div>
+<div style="font-size: 14px;line-height: 1.3">
 <ul class="simple">
-<li><p class="sd-card-text"><font size="3">Species inventory</font></p></li>
-<li><p class="sd-card-text"><font size="3">Species diversity &amp; richness</font></p></li>
-<li><p class="sd-card-text"><font size="3">Relative abundance indices</font></p></li>
-<li><p class="sd-card-text"><font size="3">Capture-recapture (CR) / Capture-mark-recapture (CMR)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Spatial mark-resight (SMR)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Spatial count (SC) model / Unmarked spatial capture-recapture</font></p></li>
-<li><p class="sd-card-text"><font size="3">Spatial Partial Identity Model (Categorical SPIM; catSPIM)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Spatial Partial Identity Model (2-flank SPIM)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Random encounter model (REM)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Random encounter and staying time (REST)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Time in front of the camera (TIFC)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Distance sampling (DS)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Time-to-event (TTE)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Space-to-event (STE)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Instantaneous sampling (IS)</font></p></li>
-<li><p class="sd-card-text"><font size="3">Behaviour</font></p></li>
+<li><p class="sd-card-text">Species inventory</p></li>
+<li><p class="sd-card-text">Species diversity &amp; richness</p></li>
+<li><p class="sd-card-text">Relative abundance indices</p></li>
+<li><p class="sd-card-text">Capture-recapture (CR) / Capture-mark-recapture (CMR)</p></li>
+<li><p class="sd-card-text">Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</p></li>
+<li><p class="sd-card-text">Spatial mark-resight (SMR)</p></li>
+<li><p class="sd-card-text">Spatial count (SC) model / Unmarked spatial capture-recapture</p></li>
+<li><p class="sd-card-text">Spatial Partial Identity Model (Categorical SPIM; catSPIM)</p></li>
+<li><p class="sd-card-text">Spatial Partial Identity Model (2-flank SPIM)</p></li>
+<li><p class="sd-card-text">Random encounter model (REM)</p></li>
+<li><p class="sd-card-text">Random encounter and staying time (REST)</p></li>
+<li><p class="sd-card-text">Time in front of the camera (TIFC)</p></li>
+<li><p class="sd-card-text">Distance sampling (DS)</p></li>
+<li><p class="sd-card-text">Time-to-event (TTE)</p></li>
+<li><p class="sd-card-text">Space-to-event (STE)</p></li>
+<li><p class="sd-card-text">Instantaneous sampling (IS)</p></li>
+<li><p class="sd-card-text">Behaviour</p></li>
 </ul>
+</div>
 </div>
 </div>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Sampling design</div>
+<div style="font-size: 14px;line-height: 1.3">
 <p class="sd-card-text"><em>(relevant to the appropriate modelling approach(es) identified)</em></p>
 <ul class="simple">
-<li><p class="sd-card-text"><font size="3">Camera arrangement</font></p></li>
-<li><p class="sd-card-text"><font size="3">Camera spacing</font></p></li>
-<li><p class="sd-card-text"><font size="3">Number of camera days per camera location</font></p></li>
-<li><p class="sd-card-text"><font size="3">Number of cameras</font></p></li>
-<li><p class="sd-card-text"><font size="3">Survey duration</font></p></li>
-<li><p class="sd-card-text"><font size="3">Total number of camera days</font></p></li>
+<li><p class="sd-card-text">Camera arrangement</p></li>
+<li><p class="sd-card-text">Camera spacing</p></li>
+<li><p class="sd-card-text">Number of camera days per camera location</p></li>
+<li><p class="sd-card-text">Number of cameras</p></li>
+<li><p class="sd-card-text">Survey duration</p></li>
+<li><p class="sd-card-text">Total number of camera days</p></li>
 </ul>
 </div>
 </div>
 </div>
-<div class="sd-col sd-d-flex-column docutils">
+</div>
+<div class="sd-col sd-d-flex-column sd-col-7 sd-col-xs-7 sd-col-sm-7 sd-col-md-7 sd-col-lg-7 docutils">
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Analysis considerations</div>
-<p class="sd-card-text">I.e., variables to consider in your analysis to reduce bias. For example:</p>
+<div style="font-size: 15px;">
+<p class="sd-card-text">I.e., variables to consider in your analysis to reduce bias. For example:</div></p>
+<div class="proportional-table2cols">
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p class="sd-card-text">Because you chose…</p></th>
@@ -446,13 +542,13 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">Correct for variable placement on detection probability by including FOV Target Feature “type” as a covariate.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Variable camera make/model</p></td>
-<td class="text-left"><p class="sd-card-text">measure sensitivity of PIR sensor of each model and use as a covariate (Hofmeester et al., 2019) or include camera model as a covariate (Kelly &amp; Holub, 2015).</p></td>
+<td class="text-left"><p class="sd-card-text">Measure sensitivity of PIR sensor of each model and use as a covariate (Hofmeester et al., 2019) or include camera model as a covariate (Kelly &amp; Holub, 2015).</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Variable camera height and/or angle</p></td>
-<td class="text-left"><p class="sd-card-text">include camera height and/or camera angle as covariates (Hofmeester et al., 2019).</p></td>
+<td class="text-left"><p class="sd-card-text">Include camera height and/or camera angle as covariates (Hofmeester et al., 2019).</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Target species - Body size[“Multiple” or “Unknown”]</p></td>
-<td class="text-left"><p class="sd-card-text">correct for variable body size of your target species by including body mass and diet as variables (O’Brien, Kinnaird, and Wibisono 2011; Hofmeester et al., 2019).</p></td>
+<td class="text-left"><p class="sd-card-text">Correct for variable body size of your target species by including body mass and diet as variables (O’Brien, Kinnaird, and Wibisono 2011; Hofmeester et al., 2019).</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">…</p></td>
 <td class="text-left"><p class="sd-card-text">…</p></td>
@@ -466,8 +562,9 @@ Analysis considerations</div>
 </div>
 </div>
 </div>
-</details><p class="sd-card-text">At each step, you will be able to access information related to the question in the “info popups” that include tabs with information explained with different levels of complexity (overview vs. advanced) and accessible formats (e.g., figures, videos, Shiny apps, etc.), as well analytical tools and resources. Click on the next dropdown to learn more.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</div>
+</details><p class="sd-card-text">At each step, you will be able to access information related to the question in the “info-popups” that include tabs with information explained with different levels of complexity (overview vs. advanced) and accessible formats (e.g., figures, videos, Shiny apps, etc.), as well analytical tools and resources. Click on the next dropdown to learn more.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">📉 Information formats</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Information is available in the following tabs of the “info popups”:</p>
@@ -477,25 +574,82 @@ Analysis considerations</div>
 <li><p class="sd-card-text"><strong>Visual resources</strong> - related figures and videos; you can watch videos within in tool itself or click on the links within the embedded video to open YouTube.</p></li>
 <li><p class="sd-card-text"><strong>Shiny apps/Widgets</strong> - access externally created apps already hosted online. Note that the apps included in the tabbed content mainly serve a supplemental material, however we are developing in Shiny apps/Widgets that more directly support users’ answering of a specific question and that can help to tailor recommendations to users’ needs more specifically via simulation-based (apps). Refer to the next section for more information.</p></li>
 <li><p class="sd-card-text"><strong>Analytical tools &amp; resources</strong> - resources for implementing analyses provided as links to R packages or scripts.</p></li>
-<li><p class="sd-card-text"><strong>References</strong> - references for all of the content in this section.</p></li>
+<li><p class="sd-card-text"><strong>References</strong> - references for content in the section.</p></li>
 </ul>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<p class="sd-card-text"><strong>Note</strong>: contents of info popups is always available in the <strong><a class="reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">Concept Library</a></strong></p>
+<p class="sd-card-text"><strong>Note</strong>: contents of info popups is always available in the <strong><a href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/" target="_blank">Concept Library</a></strong></p>
 </div>
-</div>
-</div>
-</details><p class="sd-card-text"><strong><font size="4"><span style="color:#2F5496">Question framework</font></span></strong></p>
+</details><h3 class="rubric" id="question-framework">Question framework</h3>
 <p class="sd-card-text">All questions in the tool have been created to be able to support populating recommendations from a static (non-changing) set of options created from the literature. The main sources include:</p>
 <ul class="simple">
 <li><p class="sd-card-text">Modifiers in Appendix A - Table A2 of the Remote Camera Survey Guidelines (RCSC et al., 2024)) (e.g., recommendations for the number of cameras required while considering species rarity)</p></li>
-<li><p class="sd-card-text">Clarke et al. (2023)’s “Density Handbook”</p></li>
+<li><p class="sd-card-text"><a href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers?channel=doi&linkId=63efd8ea51d7af054032a6cb&showFulltext=true" target="_blank">Clarke et al. (2023)’s “Density Handbook”</a></p></li>
 <li><p class="sd-card-text">Hofmeester et al.’s (2019) “Figure 2. Questions that lead to selection of covariates for correction in detection…”.</p></li>
 <li><p class="sd-card-text">Other resources with less significant influence</p></li>
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Question included in Phase 1.0</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<!-- with breaks
+| Level of design | Question | Options |
+|:--------------------------|:-----------------------------------------------|:-------------------------------------|
+| Objectives & Resources | Are you looking to design a new remote camera project, or analyze data that was already collected? | Design a new remote camera project, Analyze data that was already collected |
+| Objectives & Resources | What's your objective?<br>Select "Unknown" if you're not sure. | Species inventory, Species diversity & richness, Occupancy, Relative abundance, Absolute abundance, Population size, Density, Vital rates, Behaviour, Unknown |
+| Objectives & Resources | Do you have a limited number of cameras?<br>If so, how many? | YES, NO |
+| Study area & Site selection constraints | Do you plan to use data from multiple study areas? | YES, NO |
+| Study area & Site selection constraints | Will you place cameras across a known density gradient? | YES, NO |
+| Equipment & Deployment | Was the Camera Direction either random or consistent? | YES, NO |
+| Study area & Site selection constraints | Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance)?<br>If so, how many covariates? (e.g., 5 different habitat types would be 5 covariates) | YES, NO |
+| Study area & Site selection constraints | Can cameras be deployed close together (i.e., high camera density)? | YES, NO |
+| Duration & Timing | Is there a maximum number of months you can sample?<br>If so, how many? | YES, NO |
+| Duration & Timing | Is there a minimum number of months you can sample in total?<br>If so, how many? | YES, NO |
+| Duration & Timing | How many months did you sample in total? | \[numeric\] |
+| Duration & Timing | Do you wish to sample long enough to reach the species-accumulation asymptote? | YES, NO, I'm not sure |
+| Duration & Timing | How many seasons will the study contain? | \[numeric\] |
+| Target species | Are you sampling for a single species or multiple? | Single, Multiple |
+| Target species | How well is the biology about of the Target Species known? | Poorly known, Well known, I'm not sure |
+| Target species | Is the Target Species a carnivore or ungulate? | Carnivore, Ungulate, Other |
+| Target species | Does the Target Species occur in low density? | YES, NO, I'm not sure |
+| Target species | Is the distribution of the Target Species highly restricted? | YES, NO, I'm not sure |
+| Target species | Is home range size information available for your Target Species (can be taken from the literature)?<br>If so, enter the home range diameter (in metres) | YES, NO |
+| Target species | Are all of the Target Species within a same body size category?<br>If so, which category? | Small, Medium, Large, Multiple |
+| Target species | What is the approximate size of the Target Species? | Small, Medium, Large, Multiple |
+| Target species | Are all of the Target Species similarly rare or common?<br>If all are similar, which best describes the Target Species rarity? | Common, Less common, Rare, Very rare, Unknown, Multiple |
+| Target species | How rare or common is the Target Species? | Common, Less common, Rare, Very rare, Unknown, Multiple |
+| Target species | Are all of the Target Species similarly detectable?<br>If all are similar, which best describes the Target Species detectability? | Low, Medium, High, Unknown, Multiple |
+| Target species | How detectable is the Target Species? | Low, Medium, High, Unknown, Multiple |
+| Target species | Is the Target Species known or likely to investigate the camera (e.g., moose, coyote) or be camera shy (e.g., lynx)? | Exploratory, Neutral, Avoidant, I'm not sure, Variable |
+| Target species | Does the \[or one of the, if multiple\] Target Species' behaviour vary by season? | YES, NO, I'm not sure |
+| Target species | Do individuals have natural or artificial marks such that they can be uniquely identified?<br>(i.e. are the individuals, population, or species "marked," "unmarked," or "partially marked") | Marked, Partially marked, Unmarked |
+| Target species | Are ALL or a SUBET individuals naturally/artifically marked? | All, Subset |
+| Target species | Are there 3+ categories of traits that can be be used to identify individuals?<br> (i.e., information used to identify individuals that can be divided into distinct groups, e.g, sex class, age class, coat colour, markings and antler point count; Clarke et al., 2023) | YES, NO |
+| Target species | Can additional information be collected/accessed?<br> If so, what type? | Cannot be collected, Distance from animals to the camera, Animal movement speed, Collecting time-lapse images, Measuring time individuals spend in front of the camera, None of these options |
+| Target species | Can counts of individuals be determined? | YES, NO |
+| Target species | Focal area measured or detections binned by distance? | Measured, Binned |
+| Target species | Is the study population large? | YES, NO |
+| Target species | Are all of the "target species" similarly likely to investigate the camera or stake?<br>(e.g., moose, coyote) or be camera shy (e.g., lynx)<br>If all are similar, which best describes the likelihood of investigating the camera? | Same behaviour - Exploratory, Same behaviour - Neutral, Same behaviour - Avoidant, I'm not sure, Variable |
+| Target species | Which option best categorizes the rarest Target Species? | Common, Less common, Rare, Very rare, Unknown, Multiple |
+| Target species | Which option best categorizes the most common Target Species? | Common, Less common, Rare, Very rare, Unknown, Multiple |
+| Target species | How detectable is the most detectable Target Species? | Low, Medium, High, Unknown, Multiple |
+| Target species | How detectable is the least detectable Target Species? | Low, Medium, High, Unknown, Multiple |
+| Equipment & Deployment | Do you plan to use cameras of the same make and model? | YES, NO |
+| Equipment & Deployment | Do you plan to use data from cameras with different settings?<br>(e.g., if pooling data from multiple studies, protocols for camera settings may differ) | YES, NO |
+| Equipment & Deployment | Was the placement Camera Height and Camera Angle consistent or variable across Camera Locations? | Consistent, Variable |
+| Equipment & Deployment | Do you plan to use bait or lure?<br>If so, will you use the same type of bait or lure, or multiple types? | No bait/lure, YES - single type of bait/lure, YES - Multiple types of bait/lure |
+| Equipment & Deployment | Will bait/lure be placed at all or a subset of Camera Locations? | All Camera Locations, A subset of Camera Locations |
+| Equipment & Deployment | Do you plan to target specific feature(s)?<br>(e.g., facing the camera towards a game trail or mineral lick) | YES, NO |
+| Equipment & Deployment | Will all cameras target the same feature? | YES, NO |
+| Data & Analysis | Will each camera location be treated as an independent sample? | YES, NO |
+| Data & Analysis | Will you collect multiple samples from the same location? |, NO |
+| Data & Analysis | Are you using / <br>Do you plan to use mixed models? | YES, NO |
+| Data & Analysis | How many independent detections? | [numeric] |
+| Data & Analysis | How many individuals were detected? | [numeric] |
+| Data & Analysis | How many recaptures were detected? | [numeric] |
+| Data & Analysis | Is the data overdispersed?<br>\[Poisson GLM vs. negative binomial model\] | YES, NO |
+| Data & Analysis | Is the data zero-inflated? \[Poisson / Negative binomial vs. Zero-inflated / Hurdle models\] | YES, NO |
+| Data & Analysis | Try using a zero-inflated model. Is overdispersion still present when accounting for by zero-inflation?<br> (i.e., is the zero-inflated model still overdispersed) \[Zero-inflated poisson vs. Zero-inflated negative binomial model\] | YES, NO |
+| Data & Analysis | Try including a random effect for "Camera Location." Is the data still zero-inflated when accounting for a "Camera Location" random effect? \[Zero-inflation due to spatial autocorrelation of sites; mixed effects model\] | YES, NO |
+| Data & Analysis | Do you believe that another process may be contributing to excess zeros? [Zero-inflation poisson vs. Hurdle model] | YES, NO |
+-->
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p class="sd-card-text">Level of design</p></th>
@@ -509,11 +663,11 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">Design a new remote camera project, Analyze data that was already collected</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Objectives &amp; Resources</p></td>
-<td class="text-left"><p class="sd-card-text">What’s your objective?<br>Select “Unknown” if you’re not sure.</p></td>
+<td class="text-left"><p class="sd-card-text">What’s your objective? Select “Unknown” if you’re not sure.</p></td>
 <td class="text-left"><p class="sd-card-text">Species inventory, Species diversity &amp; richness, Occupancy, Relative abundance, Absolute abundance, Population size, Density, Vital rates, Behaviour, Unknown</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Objectives &amp; Resources</p></td>
-<td class="text-left"><p class="sd-card-text">Do you have a limited number of cameras?<br>If so, how many?</p></td>
+<td class="text-left"><p class="sd-card-text">Do you have a limited number of cameras? If so, how many?</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Study area &amp; Site selection constraints</p></td>
@@ -529,7 +683,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Study area &amp; Site selection constraints</p></td>
-<td class="text-left"><p class="sd-card-text">Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance)?<br>If so, how many covariates? (e.g., 5 different habitat types would be 5 covariates)</p></td>
+<td class="text-left"><p class="sd-card-text">Do you plan to strategically place camera locations to include multiple habitats or otherwise differing categories (e.g., different land cover types, or near vs. far from a disturbance)? If so, how many covariates? (e.g., 5 different habitat types would be 5 covariates)</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Study area &amp; Site selection constraints</p></td>
@@ -537,11 +691,11 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Duration &amp; Timing</p></td>
-<td class="text-left"><p class="sd-card-text">Is there a maximum number of months you can sample?<br>If so, how many?</p></td>
+<td class="text-left"><p class="sd-card-text">Is there a maximum number of months you can sample? If so, how many?</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Duration &amp; Timing</p></td>
-<td class="text-left"><p class="sd-card-text">Is there a minimum number of months you can sample in total?<br>If so, how many?</p></td>
+<td class="text-left"><p class="sd-card-text">Is there a minimum number of months you can sample in total? If so, how many?</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Duration &amp; Timing</p></td>
@@ -577,11 +731,11 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">YES, NO, I’m not sure</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Target species</p></td>
-<td class="text-left"><p class="sd-card-text">Is home range size information available for your Target Species (can be taken from the literature)?<br>If so, enter the home range diameter (in metres)</p></td>
+<td class="text-left"><p class="sd-card-text">Is home range size information available for your Target Species (can be taken from the literature)? If so, enter the home range diameter (in metres)</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Target species</p></td>
-<td class="text-left"><p class="sd-card-text">Are all of the Target Species within a same body size category?<br>If so, which category?</p></td>
+<td class="text-left"><p class="sd-card-text">Are all of the Target Species within a same body size category? If so, which category?</p></td>
 <td class="text-left"><p class="sd-card-text">Small, Medium, Large, Multiple</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Target species</p></td>
@@ -589,7 +743,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">Small, Medium, Large, Multiple</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Target species</p></td>
-<td class="text-left"><p class="sd-card-text">Are all of the Target Species similarly rare or common?<br>If all are similar, which best describes the Target Species rarity?</p></td>
+<td class="text-left"><p class="sd-card-text">Are all of the Target Species similarly rare or common? If all are similar, which best describes the Target Species rarity?</p></td>
 <td class="text-left"><p class="sd-card-text">Common, Less common, Rare, Very rare, Unknown, Multiple</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Target species</p></td>
@@ -597,7 +751,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">Common, Less common, Rare, Very rare, Unknown, Multiple</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Target species</p></td>
-<td class="text-left"><p class="sd-card-text">Are all of the Target Species similarly detectable?<br>If all are similar, which best describes the Target Species detectability?</p></td>
+<td class="text-left"><p class="sd-card-text">Are all of the Target Species similarly detectable? If all are similar, which best describes the Target Species detectability?</p></td>
 <td class="text-left"><p class="sd-card-text">Low, Medium, High, Unknown, Multiple</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Target species</p></td>
@@ -613,7 +767,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">YES, NO, I’m not sure</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Target species</p></td>
-<td class="text-left"><p class="sd-card-text">Do individuals have natural or artificial marks such that they can be uniquely identified?<br>(i.e. are the individuals, population, or species “marked,” “unmarked,” or “partially marked”)</p></td>
+<td class="text-left"><p class="sd-card-text">Do individuals have natural or artificial marks such that they can be uniquely identified? (i.e. are the individuals, population, or species “marked,” “unmarked,” or “partially marked”)</p></td>
 <td class="text-left"><p class="sd-card-text">Marked, Partially marked, Unmarked</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Target species</p></td>
@@ -621,11 +775,11 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">All, Subset</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Target species</p></td>
-<td class="text-left"><p class="sd-card-text">Are there 3+ categories of traits that can be be used to identify individuals?<br> (i.e., information used to identify individuals that can be divided into distinct groups, e.g, sex class, age class, coat colour, markings and antler point count; Clarke et al., 2023)</p></td>
+<td class="text-left"><p class="sd-card-text">Are there 3+ categories of traits that can be be used to identify individuals? (i.e., information used to identify individuals that can be divided into distinct groups, e.g, sex class, age class, coat colour, markings and antler point count; Clarke et al., 2023)</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Target species</p></td>
-<td class="text-left"><p class="sd-card-text">Can additional information be collected/accessed?<br> If so, what type?</p></td>
+<td class="text-left"><p class="sd-card-text">Can additional information be collected/accessed? If so, what type?</p></td>
 <td class="text-left"><p class="sd-card-text">Cannot be collected, Distance from animals to the camera, Animal movement speed, Collecting time-lapse images, Measuring time individuals spend in front of the camera, None of these options</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Target species</p></td>
@@ -641,7 +795,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Target species</p></td>
-<td class="text-left"><p class="sd-card-text">Are all of the “target species” similarly likely to investigate the camera or stake?<br>(e.g., moose, coyote) or be camera shy (e.g., lynx)<br>If all are similar, which best describes the likelihood of investigating the camera?</p></td>
+<td class="text-left"><p class="sd-card-text">Are all of the “target species” similarly likely to investigate the camera or stake? (e.g., moose, coyote) or be camera shy (e.g., lynx) If all are similar, which best describes the likelihood of investigating the camera?</p></td>
 <td class="text-left"><p class="sd-card-text">Same behaviour - Exploratory, Same behaviour - Neutral, Same behaviour - Avoidant, I’m not sure, Variable</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Target species</p></td>
@@ -665,7 +819,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Equipment &amp; Deployment</p></td>
-<td class="text-left"><p class="sd-card-text">Do you plan to use data from cameras with different settings?<br>(e.g., if pooling data from multiple studies, protocols for camera settings may differ)</p></td>
+<td class="text-left"><p class="sd-card-text">Do you plan to use data from cameras with different settings? (e.g., if pooling data from multiple studies, protocols for camera settings may differ)</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Equipment &amp; Deployment</p></td>
@@ -673,7 +827,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">Consistent, Variable</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Equipment &amp; Deployment</p></td>
-<td class="text-left"><p class="sd-card-text">Do you plan to use bait or lure?<br>If so, will you use the same type of bait or lure, or multiple types?</p></td>
+<td class="text-left"><p class="sd-card-text">Do you plan to use bait or lure? If so, will you use the same type of bait or lure, or multiple types?</p></td>
 <td class="text-left"><p class="sd-card-text">No bait/lure, YES - single type of bait/lure, YES - Multiple types of bait/lure</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Equipment &amp; Deployment</p></td>
@@ -681,7 +835,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">All Camera Locations, A subset of Camera Locations</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Equipment &amp; Deployment</p></td>
-<td class="text-left"><p class="sd-card-text">Do you plan to target specific feature(s)?<br>(e.g., facing the camera towards a game trail or mineral lick)</p></td>
+<td class="text-left"><p class="sd-card-text">Do you plan to target specific feature(s)? (e.g., facing the camera towards a game trail or mineral lick)</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Equipment &amp; Deployment</p></td>
@@ -697,7 +851,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">, NO</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Data &amp; Analysis</p></td>
-<td class="text-left"><p class="sd-card-text">Are you using / <br>Do you plan to use mixed models?</p></td>
+<td class="text-left"><p class="sd-card-text">Are you using /  Do you plan to use mixed models?</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Data &amp; Analysis</p></td>
@@ -713,7 +867,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">[numeric]</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Data &amp; Analysis</p></td>
-<td class="text-left"><p class="sd-card-text">Is the data overdispersed?<br>[Poisson GLM vs. negative binomial model]</p></td>
+<td class="text-left"><p class="sd-card-text">Is the data overdispersed? [Poisson GLM vs. negative binomial model]</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Data &amp; Analysis</p></td>
@@ -721,7 +875,7 @@ Analysis considerations</div>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p class="sd-card-text">Data &amp; Analysis</p></td>
-<td class="text-left"><p class="sd-card-text">Try using a zero-inflated model. Is overdispersion still present when accounting for by zero-inflation?<br> (i.e., is the zero-inflated model still overdispersed) [Zero-inflated poisson vs. Zero-inflated negative binomial model]</p></td>
+<td class="text-left"><p class="sd-card-text">Try using a zero-inflated model. Is overdispersion still present when accounting for by zero-inflation? (i.e., is the zero-inflated model still overdispersed) [Zero-inflated poisson vs. Zero-inflated negative binomial model]</p></td>
 <td class="text-left"><p class="sd-card-text">YES, NO</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p class="sd-card-text">Data &amp; Analysis</p></td>
@@ -736,44 +890,58 @@ Analysis considerations</div>
 </table>
 </div>
 </div>
-</details><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">Don’t forget to check out <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="#dev"><span>development</span></a> (below) before you leave; we’ve got exciting <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="#dev"><span>Shiny apps/Widgets in development</span></a>.</p>
+</details><div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p class="sd-card-text">The information provided herein reflects perspectives and findings from Western scientific frameworks and may not encompass alternative or indigenous knowledge systems.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<p class="sd-card-text" id="dev"><strong><font size="4.5"><span style="color:#2F5496">Development</font></span></strong></p>
+<hr class="docutils" />
+<h2 class="rubric" id="development"><span id="dev"></span>Development</h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">🚀 Shiny apps/Widgets in development</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Currently, integrated apps are mostly “illustrative” (for the purpose of illustrating a concept), however, there are a few more helpful apps in development; some of these include apps that <strong>a) directly support answering of a specific question</strong> within the RC Decision Support Tool and <strong>b) other generally useful “user tools”</strong>). As well, the RC Decision Support Tool working group was very interested in integrating simulations more directly  to be able to provide data-driven recommendations that are more fine-tuned to your study (i.e., <strong>c) data/simulation-driven apps</strong> that feed into the decision tool branches); we also anticipated that the remote camera community would also find this valuable.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 sd-m-0 sd-p-0 docutils">
 <p class="sd-card-text"><strong>Directly support answering of a specific question:</strong></p>
 <ul class="simple">
 <li><p class="sd-card-text">“Species home range / body size lookup” - lookup home range size information from multiple sources. [ACTIVE; try it out <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_17_sp_hr_size.html#hr_body_size_lookup"><span>here</span></a>]</p></li>
 </ul>
-<figure class="align-center" id="demo-hr-body-size-lookup">
-<a class="reference internal image-reference" href="_images/home_range_lookup.png"><img alt="_images/home_range_lookup.png" src="_images/home_range_lookup.png" style="width: 500px;" /></a>
-</figure>
+<br>
 <p class="sd-card-text"><strong>User tools</strong>:</p>
 <ul class="simple">
 <li><p class="sd-card-text">Populate detection rate from tagged data [In development]</p></li>
 <li><p class="sd-card-text">Graph detections / detection rates in multiple formats [In development]</p></li>
 </ul>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 sd-m-0 sd-p-0 docutils">
+<figure class="align-center" id="demo-hr-body-size-lookup">
+<a class="reference internal image-reference" href="_images/home_range_lookup.png"><img alt="_images/home_range_lookup.png" src="_images/home_range_lookup.png" style="width: 100%;" /></a>
+</figure>
+</div>
+</div>
+</div>
+<hr class="docutils" />
 <p class="sd-card-text" id="dev-apps-sim"><strong>Data/Simulation-driven apps</strong>:
 We have identified two modeling approaches to “build-out” as more simulation-driven integrations that serve as our trial development modeling approaches.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
+<div class="sd-col sd-d-flex-column sd-m-0 sd-p-0 docutils">
 <p class="sd-card-text"><strong>Occupancy - Spatial power analysis</strong><br>
-(<em>In development by Dr. Eric Nielsen (Wildlife Research Scientist, Canadian Forest Service; Committee Member, RCSC)</em>)</p>
+<em>Being developedby Dr. Eric Nielsen (Wildlife Research Scientist, Canadian Forest Service; RCSC Committee Member)</em></p>
 <figure class="align-center" id="demo-occupancy">
-<a class="reference internal image-reference" href="_images/00_demo_occupancy_app.png"><img alt="_images/00_demo_occupancy_app.png" src="_images/00_demo_occupancy_app.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/00_demo_occupancy_app.png"><img alt="_images/00_demo_occupancy_app.png" src="_images/00_demo_occupancy_app.png" style="width: 70%;" /></a>
 </figure>
+</div>
+<div class="sd-col sd-d-flex-column sd-m-0 sd-p-0 docutils">
 <p class="sd-card-text"><strong>Expected precision of density estimates using Time in Front of the Camera (TIFC)</strong><br>
-(<em>In development by Marcus Becker (Reporting Analyst, ABMI [Science Centre]; Committee Member, RCSC)</em>)</p>
+<em>Being developed by Marcus Becker (Reporting Analyst, ABMI [Science Centre]; RCSC Committee Member)</em></p>
 <figure class="align-center" id="demo-tifc">
-<a class="reference internal image-reference" href="_images/00_demo_tifc_app.gif"><img alt="_images/00_demo_tifc_app.gif" src="_images/00_demo_tifc_app.gif" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/00_demo_tifc_app.gif"><img alt="_images/00_demo_tifc_app.gif" src="_images/00_demo_tifc_app.gif" style="width: 90%;" /></a>
 </figure>
+</div>
+</div>
+</div>
 <p class="sd-card-text">These apps will soon be embedded available as separate, standalone apps, and eventually, incorporated into the decision-tree components of the tool (and thus use simulated information to provide more informed recommendations).</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -808,26 +976,21 @@ We have identified two modeling approaches to “build-out” as more simulation
 </ul>
 <p class="sd-card-text">Please refer back; we will update this section continually.</p>
 </div>
-</details></div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<p class="sd-card-text" id="contact-us"><strong><font size="4.5"><span style="color:#2F5496">Contact us</font></span></strong></p>
-<p class="sd-card-text">Have questions, feedback, or a feature request? Have resources to contribute? Please contact us. We’ll get in touch as soon as we can.</p>
+</details><hr class="docutils" />
+<h2 class="rubric" id="id1"><span id="contact-us"></span>Contact us</h2>
+<p class="sd-card-text">Have questions, feedback, or a feature request? Have resources to contribute? Please contact us either via the form below or by emailing the RCSC Coordinator (<a class="reference external" href="mailto:abwildlifecameras&#37;&#52;&#48;gmail&#46;com">abwildlifecameras<span>&#64;</span>gmail<span>&#46;</span>com</a>). We’ll get in touch as soon as we can.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<iframe class="airtable-embed" src="https://airtable.com/embed/appEK23r7kkCemnRA/pagDjFn6B7yM8TMMB/form" frameborder="0" onmousewheel="" width="100%" height="910" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ <iframe id="JotFormIFrame-242607211652247" title="RC Tool User Submissions" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/242607211652247" frameborder="0" style="min-width:100%;max-width:100%;height:300px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242607211652247']", "https://form.jotform.com/")</script> 
 </div>
 </div>
 </div>
-</details></div>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-5 sd-row-cols-xs-5 sd-row-cols-sm-5 sd-row-cols-md-5 sd-row-cols-lg-5 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-row sd-row-cols-6 sd-row-cols-xs-6 sd-row-cols-sm-6 sd-row-cols-md-6 sd-row-cols-lg-6 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <img alt="_images/aca_ed.png" class="align-center" src="_images/aca_ed.png" />
 </div>
@@ -843,15 +1006,15 @@ We have identified two modeling approaches to “build-out” as more simulation
 <div class="sd-col sd-d-flex-column docutils">
 <img alt="_images/abmi_ed.png" class="align-center" src="_images/abmi_ed.png" />
 </div>
+<div class="sd-col sd-d-flex-column docutils">
+<img alt="_images/cfs_ed.png" class="align-center" src="_images/cfs_ed.png" />
+</div>
 </div>
 </div>
 <hr class="docutils" />
-<p><em><font size="2">This project was funded by the Alberta Conservation Association (ACA)m the Office of the Chief Scientist (OCS), and Environment and Climate Change Canada (ECCC). This project was provided in-kind support by the Alberta Remote Camera Steering Committee (RCSC), Alberta Environment and Protection Areas (EPA), Alberta Biodiversity Monitoring Institute (ABMI), and the University of Alberta Faculty of Science.</font></em>
-<br></p>
-<hr class="docutils" />
-<div class="docutils">
+<p class="sd-card-text"><em><font size="2.5">This project was funded by the Alberta Conservation Association (ACA) the Office of the Chief Scientist (OCS), and Environment and Climate Change Canada (ECCC). This project was provided in-kind support by the Alberta Remote Camera Steering Committee (RCSC), Alberta Environment and Protection Areas (EPA), Alberta Biodiversity Monitoring Institute (ABMI), Canadian Forest Service (CFS), and the University of Alberta Faculty of Science.</font></em></p>
 </div>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -900,8 +1063,8 @@ We have identified two modeling approaches to “build-out” as more simulation
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
