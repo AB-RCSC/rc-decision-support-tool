@@ -1,0 +1,65 @@
+.class-transparent {
+ --sd-color-card-background: transparent;
+}
+
+.class-prog1 {
+  --sd-color-card-background: #F7F056;
+}
+
+.class-prog2 {
+  --sd-color-card-background: #F7CB45;
+}
+
+.class-prog3 {
+  --sd-color-card-background: #F7CB45;
+}
+
+.class-prog4 {
+  --sd-color-card-background: #D9CCE3;
+}
+
+.class-prog5 {
+  --sd-color-card-background: #EEDD88;
+}
+
+.class-prog6 {
+  --sd-color-card-background: #7BAFDE;
+}
+
+.class-prog7 {
+  --sd-color-card-background: #CCDDAA;
+}
+
+.class-option-button-blue {
+  --sd-color-card-background: #DAE8FC;
+}
+
+
+/*not sure which of these works for you; also blue can just be the default colour/*
+.opt-button-blue {
+    white-space: normal;
+    font-size: 14px !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    --sd-color-card-background: #DAE8FC;
+}
+
+.opt-button-grey {
+    white-space: normal;
+    font-size: 14px !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    --sd-color-card-background: #F5F5F5;
+}
+
+.class-opt-button-blue {
+  --sd-color-card-background: #DAE8FC;
+}
+
+.class-opt-button-blue {
+  --sd-color-card-background: #DAE8FC;
+}
