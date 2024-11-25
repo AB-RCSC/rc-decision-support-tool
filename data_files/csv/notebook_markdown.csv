@@ -1,1 +1,15 @@
 notebook,path_markdown
+01_02_objective.ipynb,01_02_objective_note.md
+01_03_num_cams.ipynb,01_03_num_cams_note.md
+01_06_cam_strat_covar.ipynb,01_06_cam_strat_covar_note.md
+01_08_surv_dur_min_max.ipynb,01_08_surv_dur_min_max_note.md
+01_10_sp_asymptote.ipynb,01_10_sp_asymptote_note.md
+01_12_obj_targ_sp.ipynb,01_12_obj_targ_sp_note.md
+01_13_sp_info.ipynb,01_13_sp_info_note.md
+01_14_sp_type.ipynb,01_14_sp_type_note.md
+01_16_sp_occ_restr.ipynb,01_16_sp_occ_restr_note.md
+01_17_sp_hr_size.ipynb,01_17_sp_hr_size_note.md
+01_18_sp_size.ipynb,01_18_sp_size_note.md
+01_19_sp_rarity.ipynb,01_19_sp_rarity_note.md
+01_20_sp_detprob_cat.ipynb,01_20_sp_detprob_cat_note.md
+01_47_cam_independent.ipynb,01_47_cam_independent_note.md
