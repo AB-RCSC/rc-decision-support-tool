@@ -11,8 +11,9 @@ kernelspec:
   language: python
   name: python3
 ---
+
 - <b>Species inventory</b>: Rapid assessment surveys used to determine what species are present in a given area at a given point in time; there is no attempt made to quantify aspects of communities or populations (Wearn & Glover-Kapfer, 2017).
-- <b>Species diversity & richness</b>: <br>    - <b>Species diversity</b>: 'A measure of diversity that incorporates both the number of species in an assemblage and some measure of their relative abundances.' (Gotelli & Chao, 2013)<br>    - <b>Species richness</b>: 'The total number of species in an assemblage or a sample' (Gotelli & Chao, 2013).
+- <b>Species diversity & richness</b>: <br> - <b>Species diversity</b>: 'A measure of diversity that incorporates both the number of species in an assemblage and some measure of their relative abundances.' (Gotelli & Chao, 2013)<br> - <b>Species richness</b>: 'The total number of species in an assemblage or a sample' (Gotelli & Chao, 2013).
 - <b>Occupancy</b>: The probability a site is occupied by the species (Mackenzie et al., 2002). Occupancy is also highly suitable for evaluating broad-scale patterns of species distribution (Wearn & Glover-Kapfer, 2017).
 - <b>Relative abundance</b>: The number of animals detected from one camera/area compared to another camera/area.
 - <b>Absolute abundance / Population size</b>: The number of individuals in a population (Wearn & Glover-Kapfer, 2017).
