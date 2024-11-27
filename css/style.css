@@ -8,6 +8,21 @@
     text-align: left;
 }
 
+.ques-widget {
+    background-color: #DAE8FC;
+    color: black;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: flex-start;
+    padding: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
 .opt-button {
     white-space: normal;
     font-size: 14px !important;
