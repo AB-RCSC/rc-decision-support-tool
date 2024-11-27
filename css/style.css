@@ -23,6 +23,14 @@
     border-radius: 10px;
 }
 
+.accordion-body{
+    background-color: #7aa8bd;
+}
+
+.accordion-button{
+    background-color: #fbfbef;
+}
+
 .opt-button {
     white-space: normal;
     font-size: 14px !important;
