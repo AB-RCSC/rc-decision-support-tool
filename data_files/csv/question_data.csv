@@ -29,7 +29,7 @@ sp_asymptote,Species-accumulation asymptote,"{
     ]
 }",sp_asymptote,Do you wish to sample long enough to reach the species-accumulation asymptote?,"yes, no, unkn","YES, NO, I'm not sure"
 obj_targ_sp,Number of Target Species ,NULL,obj_targ_sp,Are you sampling for a single species or multiple?,"single, multiple","Single, Multiple"
-sp_info,Species well known <i>vs.</i> poorly known,"{
+sp_info,Species well known vs. poorly known,"{
     ""obj_targ_sp"": [
         ""single""
     ],
