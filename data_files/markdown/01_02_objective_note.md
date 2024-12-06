@@ -21,3 +21,7 @@ kernelspec:
 - <b>Vital rates</b>: The species-specific factors of a population that, together, play a large role in the population's trend. These include the birth rate, recruitment rate, and probability of survival and mortality.' (NBCKC, 2024a)
 - <b>Behaviour</b>: Behaviour focused objectives vary greatly; they may be qualitative or quantitative (e.g., diel activity patterns, mating, boldness, predation, foraging, activity patterns, vigilance, parental care (Caravaggi et al., 2020; Wearn & Glover-Kapfer, 2017).
 - <b>Unknown</b>: Select this option if you haven't decided which state variable you're interested in. Note that the tool will ask you questions related to all of the state variables, and the results will be reflected accordingly.
+
+```{code-cell} ipython3
+
+```
