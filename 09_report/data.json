@@ -1,0 +1,8 @@
+{
+  "entry_point": "Design a new remote camera project",
+  "state_variable": "Occupancy",
+  "num_cameras": 40,
+  "study_area": "Multiple",
+  "covariates": "YES ; 4 covariates",
+  "min_survey_months": "NO"
+}
