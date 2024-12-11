@@ -1,8 +1,12 @@
-# import os
+import os
 from flask import Flask, jsonify
+from flask_cors import CORS  # Import CORS
 
 # Flask app to handle HTTP requests
 flask_app = Flask(__name__)
+
+# Enable CORS for all routes
+CORS(flask_app)
 
 @flask_app.route("/print-message", methods=["GET"])
 def print_message():
