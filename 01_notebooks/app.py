@@ -14,4 +14,10 @@ def print_message():
     return jsonify({"message": "Message printed successfully!"}), 200
 
 if __name__ == "__main__":
-    flask_app.run(host="0.0.0.0", port=5000, debug=True)
+    flask_app.run(
+    host="0.0.0.0",
+    port=5000,
+    debug=True,
+    ssl_context=('server.crt', 'server_no_pass.key')
+)
+
